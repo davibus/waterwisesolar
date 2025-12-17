@@ -28,7 +28,7 @@ export default function Home() {
     <div>
       {/* Hero Section */}
       <section className="hero" style={{
-        backgroundImage: `url('https://img1.wsimg.com/isteam/ip/d7c96787-caed-4719-8296-2e17c6596d29/Pic%20at%20the%20FPV%20array.jpg')`
+        backgroundImage: `url('/hero-fpv-array.jpg')`
       }}>
         <div className="hero-overlay"></div>
         <div className="container" style={{ display: 'flex', justifyContent: 'flex-end' }}>
