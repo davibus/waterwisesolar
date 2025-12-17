@@ -17,26 +17,42 @@ export default function Home() {
       !url.endsWith('/') &&
       !url.endsWith('waterwisesolar.com') &&
       !url.endsWith('.xml');
-  }).map(p => ({
-    title: p.metadata.title || 'Untitled Article',
-    date: extractDate(p.markdown),
-    url: p.metadata.url,
-    slug: p.metadata.url.split('/').pop()
-  }));
+  }).map(p => {
+    // Extract excerpt from markdown (first paragraph after the date)
+    const lines = p.markdown.split('\n');
+    let excerpt = '';
+    let foundDate = false;
+    for (const line of lines) {
+      if (line.match(/[A-Z][a-z]+ \d{1,2}, \d{4}/)) {
+        foundDate = true;
+        continue;
+      }
+      if (foundDate && line.trim().length > 20) {
+        excerpt = line.trim();
+        break;
+      }
+    }
+
+    return {
+      title: p.metadata.title || 'Untitled Article',
+      date: extractDate(p.markdown),
+      url: p.metadata.url,
+      slug: p.metadata.url.split('/').pop(),
+      excerpt: excerpt
+    };
+  });
 
   return (
     <div>
       {/* Hero Section */}
-      <section className="hero" style={{
-        backgroundImage: `url('/hero-fpv-array.jpg')`
-      }}>
-        <div className="hero-overlay"></div>
-        <div className="container" style={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <div className="hero-content">
-            <h1>Advocating for Floating Solar</h1>
-            <p>In the Colorado River Basin and beyond.</p>
-            <div className="hero-phone">(801) 647-1007</div>
-          </div>
+      <section className="hero-split">
+        <div className="hero-image">
+          <img src="/hero-fpv-array.jpg" alt="Floating Solar Array" />
+        </div>
+        <div className="hero-content-box">
+          <h1>Advocating for Floating Solar</h1>
+          <p>in the Colorado River Basin<br />and beyond.</p>
+          <div className="hero-phone">(801) 647-1007</div>
         </div>
       </section>
 
@@ -64,10 +80,21 @@ export default function Home() {
             </div>
             <div className="chart-placeholder">
               <div>
-                <h3>Unregulated Inflow to Lake Powell</h3>
-                <p style={{ color: '#94a3b8' }}>[Chart Image Placeholder]</p>
+                <h3 style={{ textAlign: 'left', fontSize: '0.875rem', marginBottom: '1rem' }}>
+                  2025 operated at 55% of the pools combined capacity of 54.5 MAF (March 25, 2025).
+                </h3>
+                <p style={{ color: '#94a3b8' }}>[Graph Image Placeholder]</p>
               </div>
             </div>
+          </div>
+          <div className="charts-description">
+            <h3>Unregulated Inflow to Lake Powell</h3>
+            <p>
+              Historical annual unregulated inflows to Lake Powell since its filling until the 2021 drought coverage. To meet current natural depletions, 8.23 million acre-feet of water must flow into Lake Powell annually. The chart illustrates why Lake Mead, Powell, the Colorado River Forecast Center for the current water year. If inflows…
+            </p>
+            <p style={{ fontSize: '0.875rem', color: '#94a3b8' }}>
+              <em>Image and Data are Sourced by Water Data for Texas. See https://www.waterdatafortexas.org/</em>
+            </p>
           </div>
         </div>
       </section>
@@ -79,10 +106,9 @@ export default function Home() {
           <div className="blog-list">
             {articles.map((article, idx) => (
               <div key={idx} className="blog-item">
-                <Link href={`/f/${article.slug}`} className="read-more">
-                  <h3>{article.title}</h3>
-                </Link>
                 {article.date && <span className="blog-date">{article.date}</span>}
+                <h3>{article.title}</h3>
+                {article.excerpt && <p className="blog-excerpt">{article.excerpt}</p>}
                 <Link href={`/f/${article.slug}`} className="read-more">
                   Continue Reading
                 </Link>
