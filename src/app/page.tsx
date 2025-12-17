@@ -1,66 +1,102 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from 'next/link';
+import { getHomePage, getAllPages, PageData } from '@/lib/data';
+
+function extractDate(markdown: string): string | null {
+  const match = markdown.match(/([A-Z][a-z]+ \d{1,2}, \d{4})/);
+  return match ? match[1] : null;
+}
 
 export default function Home() {
+  const homePage = getHomePage();
+  const allPages = getAllPages();
+
+  // Filter for article pages (exclude home and xml)
+  const articles = allPages.filter(p => {
+    const url = p.metadata.url;
+    return url &&
+      !url.endsWith('/') &&
+      !url.endsWith('waterwisesolar.com') &&
+      !url.endsWith('.xml');
+  }).map(p => ({
+    title: p.metadata.title || 'Untitled Article',
+    date: extractDate(p.markdown),
+    url: p.metadata.url,
+    slug: p.metadata.url.split('/').pop()
+  }));
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
+    <div>
+      {/* Hero Section */}
+      <section className="hero" style={{
+        backgroundImage: `url('https://img1.wsimg.com/isteam/ip/d7c96787-caed-4719-8296-2e17c6596d29/Pic%20at%20the%20FPV%20array.jpg')`
+      }}>
+        <div className="hero-overlay"></div>
+        <div className="container" style={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <div className="hero-content">
+            <h1>Advocating for Floating Solar</h1>
+            <p>In the Colorado River Basin and beyond.</p>
+            <div className="hero-phone">(801) 647-1007</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="section section-mission">
+        <div className="container">
+          <h2>Mission</h2>
           <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+            Water Wise Solar Solutions was formed to study the application of Utility Scale Floating Photovoltaic Solar Arrays as an effective mitigation strategy for evaporative water loss within the Colorado River Basin.
           </p>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Charts Section */}
+      <section className="section section-charts">
+        <div className="container">
+          <h2>Colorado River Basin (CRB) Water Supply</h2>
+          <div className="charts-grid">
+            {/* Placeholders for the charts from the screenshot */}
+            <div className="chart-placeholder">
+              <div>
+                <h3>Reservoir Capacities (MAF)</h3>
+                <p style={{ color: '#94a3b8' }}>[Chart Image Placeholder]</p>
+              </div>
+            </div>
+            <div className="chart-placeholder">
+              <div>
+                <h3>Unregulated Inflow to Lake Powell</h3>
+                <p style={{ color: '#94a3b8' }}>[Chart Image Placeholder]</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* Blog List Section */}
+      <section className="section section-blog">
+        <div className="container">
+          <h2>Saving Water with Floating Solar</h2>
+          <div className="blog-list">
+            {articles.map((article, idx) => (
+              <div key={idx} className="blog-item">
+                <Link href={`/f/${article.slug}`} className="read-more">
+                  <h3>{article.title}</h3>
+                </Link>
+                {article.date && <span className="blog-date">{article.date}</span>}
+                <Link href={`/f/${article.slug}`} className="read-more">
+                  Continue Reading
+                </Link>
+                <div style={{ height: '1px', background: '#e2e8f0', marginTop: '1.5rem' }}></div>
+              </div>
+            ))}
+
+            {articles.length === 0 && (
+              <p>No articles found in crawl data.</p>
+            )}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
+
