@@ -75,7 +75,7 @@ export default function Home() {
             <div className="chart-placeholder">
               <div>
                 <h3>Reservoir Capacities (MAF)</h3>
-                <p style={{ color: '#94a3b8' }}>[Chart Image Placeholder]</p>
+                <img src="/images/water-levels-MAF.png" alt="Reservoir Capacities Chart" style={{ width: '100%', height: 'auto' }} />
               </div>
             </div>
             <div className="chart-placeholder">
