@@ -1,9 +1,26 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { getHomePage, getAllPages, PageData } from '@/lib/data';
 
 function extractDate(markdown: string): string | null {
   const match = markdown.match(/([A-Z][a-z]+ \d{1,2}, \d{4})/);
   return match ? match[1] : null;
+}
+
+function generateAltText(title: string): string {
+  // Create SEO-friendly alt text based on article title
+  const altTextMap: { [key: string]: string } = {
+    'Introduction': 'Floating solar panels on reservoir - water-wise renewable energy solution',
+    'Solar:  Land vs. Water': 'Large-scale solar farm aerial view - ground-mounted photovoltaic installation',
+    'FPV Size and Business Case': 'Extensive solar panel array - floating photovoltaic business case visualization',
+    'Electricity Pricing, PPA\'s and Government Programs': 'Solar energy infrastructure - power purchase agreement renewable energy',
+    'FPV & Water Conservation ': 'Water reservoir and dam - conservation infrastructure for floating solar',
+    'Political, Social, Economic, and Regulatory Considerations': 'Wind turbines and renewable energy - clean energy policy and regulation',
+    'Notable International FPV Arrays with Local Application': 'Aerial view of solar panel rows - international floating photovoltaic array',
+    'Environmental, Recreational and Permitting Factors': 'Solar panels on water - environmental impact of aquatic renewable energy'
+  };
+
+  return altTextMap[title] || `${title} - floating solar and water conservation`;
 }
 
 export default function Home() {
@@ -33,95 +50,134 @@ export default function Home() {
       }
     }
 
+    // Extract slug from URL (e.g., "/f/introduction" from "https://waterwisesolar.com/f/introduction")
+    const urlPath = p.metadata.url.replace('https://waterwisesolar.com', '').replace('http://waterwisesolar.com', '');
+    const slug = urlPath.startsWith('/') ? urlPath.substring(1) : urlPath;
+
     return {
       title: p.metadata.title || 'Untitled Article',
       date: extractDate(p.markdown),
       url: p.metadata.url,
-      slug: p.metadata.url.split('/').pop(),
-      excerpt: excerpt
+      slug: slug,
+      excerpt: excerpt,
+      image: p.metadata.og_image || null
     };
   });
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="hero-split">
-        <div className="hero-image">
-          <img src="/hero-fpv-array.jpg" alt="Floating Solar Array" />
+      {/* Hero Section - Full Viewport */}
+      <section className="hero-main">
+        <div className="hero-content-overlay">
+          <h1>Innovating in the Intermountain West and Southwest to save water, save land, and accelerate peak matching energy generation</h1>
+          <Link href="/technology" className="btn btn-primary">Learn About Floating Solar</Link>
         </div>
-        <div className="hero-content-box">
-          <h1>Advocating for Floating Solar</h1>
-          <p>in the Colorado River Basin<br />and beyond.</p>
-          <div className="hero-phone">(801) 647-1007</div>
+        <div className="hero-image-caption">
+          Mountain Regional Water Treatment plant, Summit County, UT 2024
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="section section-mission">
+      {/* Introduction Section */}
+      <section className="section section-warm">
         <div className="container">
-          <h2>Mission</h2>
-          <p>
-            Water Wise Solar Solutions was formed to study the application of Utility Scale Floating Photovoltaic Solar Arrays as an effective mitigation strategy for evaporative water loss within the Colorado River Basin.
+          <div className="two-column-layout">
+            <div className="column-text">
+              <h2>The Water-Energy Nexus</h2>
+              <p className="overview-intro">
+                The Colorado River, a vital water source for the American West, is in crisis. Ongoing drought, chronic overuse, and climate pressures have triggered historic water shortages, prompting mandatory cutbacks and urgent calls to rebalance the region's water withdrawals with its dwindling supply.
+              </p>
+              <p className="overview-intro">
+                Floating solar photovoltaic (FPV) systems offer a complementary solution that mitigates evaporative losses from reservoirs while generating clean electricity—without requiring major changes to consumer behavior or infrastructure expansion. Utah, Arizona, and New Mexico, with their abundant solar resources, constant drought conditions, and numerous man-made reservoirs, are ideal locations for this technology.
+              </p>
+            </div>
+            <div className="column-image">
+              <Image
+                src="/images/introduction-picture.jpg"
+                alt="Floating solar panels on reservoir - innovative water-wise renewable energy technology"
+                width={1200}
+                height={800}
+                quality={85}
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partnership Section - Placeholder */}
+      <section className="section section-dark">
+        <div className="container">
+          <h2>Partner With Us</h2>
+          <p className="overview-intro">
+            Content coming soon. This section will outline partnership opportunities and benefits.
           </p>
+          <Link href="/contact" className="btn btn-secondary" style={{marginTop: '2rem'}}>Get In Touch</Link>
         </div>
       </section>
 
-      {/* Charts Section */}
-      <section className="section section-charts">
-        <div className="container">
-          <h2>Colorado River Basin (CRB) Water Supply</h2>
-          <div className="charts-grid">
-            {/* Placeholders for the charts from the screenshot */}
-            <div className="chart-placeholder">
-              <div>
-                <h3>Reservoir Capacities (MAF)</h3>
-                <img src="/images/water-levels-MAF.png" alt="Reservoir Capacities Chart" style={{ width: '100%', height: 'auto' }} />
-              </div>
-            </div>
-            <div className="chart-placeholder">
-              <div>
-                <h3 style={{ textAlign: 'left', fontSize: '0.875rem', marginBottom: '1rem' }}>
-                  2025 operated at 55% of the pools combined capacity of 54.5 MAF (March 25, 2025).
-                </h3>
-                <p style={{ color: '#94a3b8' }}>[Graph Image Placeholder]</p>
-              </div>
-            </div>
+      {/* Articles Section */}
+      {articles.length > 0 && (
+        <>
+          <div className="container" style={{textAlign: 'center', padding: 'clamp(4rem, 10vw, 8rem) 1.5rem 0'}}>
+            <h2 style={{fontSize: 'clamp(2rem, 5vw, 3.5rem)', marginBottom: 0}}>Articles & Insights</h2>
           </div>
-          <div className="charts-description">
-            <h3>Unregulated Inflow to Lake Powell</h3>
-            <p>
-              Historical annual unregulated inflows to Lake Powell since its filling until the 2021 drought coverage. To meet current natural depletions, 8.23 million acre-feet of water must flow into Lake Powell annually. The chart illustrates why Lake Mead, Powell, the Colorado River Forecast Center for the current water year. If inflows…
-            </p>
-            <p style={{ fontSize: '0.875rem', color: '#94a3b8' }}>
-              <em>Image and Data are Sourced by Water Data for Texas. See https://www.waterdatafortexas.org/</em>
-            </p>
-          </div>
-        </div>
-      </section>
+          {articles.map((article, index) => {
+            const isEven = index % 2 === 0;
+            const bgClass = isEven ? 'section-warm' : 'section-light';
 
-      {/* Blog List Section */}
-      <section className="section section-blog">
-        <div className="container">
-          <h2>Saving Water with Floating Solar</h2>
-          <div className="blog-list">
-            {articles.map((article, idx) => (
-              <div key={idx} className="blog-item">
-                {article.date && <span className="blog-date">{article.date}</span>}
-                <h3>{article.title}</h3>
-                {article.excerpt && <p className="blog-excerpt">{article.excerpt}</p>}
-                <Link href={`/f/${article.slug}`} className="read-more">
-                  Continue Reading
-                </Link>
-                <div style={{ height: '1px', background: '#e2e8f0', marginTop: '1.5rem' }}></div>
-              </div>
-            ))}
-
-            {articles.length === 0 && (
-              <p>No articles found in crawl data.</p>
-            )}
-          </div>
-        </div>
-      </section>
+            return (
+              <section key={index} className={`blog-preview-section ${bgClass}`}>
+                <div className="container">
+                  <div className="two-column-layout">
+                    {isEven ? (
+                      <>
+                        <div className="column-text">
+                          <h3>{article.title}</h3>
+                          {article.date && <span className="blog-date">{article.date}</span>}
+                          {article.excerpt && <p className="overview-intro">{article.excerpt}</p>}
+                          <Link href={`/${article.slug}`} className="btn btn-secondary">Read More</Link>
+                        </div>
+                        <div className="column-image">
+                          <Image
+                            src={article.image || '/images/introduction-picture.jpg'}
+                            alt={generateAltText(article.title)}
+                            width={1200}
+                            height={800}
+                            quality={85}
+                            priority={index === 0}
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="column-image">
+                          <Image
+                            src={article.image || '/images/introduction-picture.jpg'}
+                            alt={generateAltText(article.title)}
+                            width={1200}
+                            height={800}
+                            quality={85}
+                            priority={index === 0}
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
+                        </div>
+                        <div className="column-text">
+                          <h3>{article.title}</h3>
+                          {article.date && <span className="blog-date">{article.date}</span>}
+                          {article.excerpt && <p className="overview-intro">{article.excerpt}</p>}
+                          <Link href={`/${article.slug}`} className="btn btn-secondary">Read More</Link>
+                        </div>
+                      </>
+                    )}
+                  </div>
+                </div>
+              </section>
+            );
+          })}
+        </>
+      )}
     </div>
   );
 }
