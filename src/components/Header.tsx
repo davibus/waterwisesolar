@@ -16,9 +16,6 @@ export default function Header() {
                         <Link href="/about">About Us</Link>
                         <Link href="/contact">Contact</Link>
                     </div>
-                    <Link href="/contact" className="btn btn-primary">
-                        Partner With Us
-                    </Link>
                 </nav>
             </div>
         </header>

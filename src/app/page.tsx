@@ -73,10 +73,6 @@ export default function Home() {
         <HeroVideo />
         <div className="hero-content-overlay">
           <h1>Innovating in the Intermountain West and Southwest to save water, save land, and accelerate peak matching energy generation</h1>
-          <Link href="/technology" className="btn btn-primary">Learn About Floating Solar</Link>
-        </div>
-        <div className="hero-image-caption">
-          Mountain Regional Water Treatment plant, Summit County, UT 2024
         </div>
       </section>
 
@@ -94,15 +90,46 @@ export default function Home() {
               </p>
             </div>
             <div className="column-image">
-              <Image
-                src="/images/introduction-picture.jpg"
-                alt="Floating solar panels on reservoir - innovative water-wise renewable energy technology"
-                width={1200}
-                height={800}
-                quality={85}
-                priority
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
+              <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', height: '100%'}}>
+                <Image
+                  src="/images/AdobeStock_1500691155_Preview.jpeg"
+                  alt="Water and energy infrastructure - floating solar technology"
+                  width={600}
+                  height={600}
+                  quality={85}
+                  priority
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px'}}
+                />
+                <Image
+                  src="/images/AdobeStock_1515563302_Preview.jpeg"
+                  alt="Renewable energy and water conservation systems"
+                  width={600}
+                  height={600}
+                  quality={85}
+                  priority
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px'}}
+                />
+                <Image
+                  src="/images/AdobeStock_1615928997_Preview.jpeg"
+                  alt="Solar power generation on water bodies"
+                  width={600}
+                  height={600}
+                  quality={85}
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px'}}
+                />
+                <Image
+                  src="/images/AdobeStock_1739744825_Preview.jpeg"
+                  alt="Sustainable water and energy solutions"
+                  width={600}
+                  height={600}
+                  quality={85}
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px'}}
+                />
+              </div>
             </div>
           </div>
         </div>
