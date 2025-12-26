@@ -1,0 +1,1 @@
+Commit, push, and open PR in Github for all local changes. 

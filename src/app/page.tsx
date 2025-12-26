@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getHomePage, getAllPages, PageData } from '@/lib/data';
+import HeroVideo from '@/components/HeroVideo';
+import SectionVideo from '@/components/SectionVideo';
 
 function extractDate(markdown: string): string | null {
   const match = markdown.match(/([A-Z][a-z]+ \d{1,2}, \d{4})/);
@@ -68,6 +70,7 @@ export default function Home() {
     <div>
       {/* Hero Section - Full Viewport */}
       <section className="hero-main">
+        <HeroVideo />
         <div className="hero-content-overlay">
           <h1>Innovating in the Intermountain West and Southwest to save water, save land, and accelerate peak matching energy generation</h1>
           <Link href="/technology" className="btn btn-primary">Learn About Floating Solar</Link>
@@ -105,14 +108,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Partnership Section - Placeholder */}
-      <section className="section section-dark">
-        <div className="container">
-          <h2>Partner With Us</h2>
-          <p className="overview-intro">
-            Content coming soon. This section will outline partnership opportunities and benefits.
+      {/* Solar: Land vs. Water Section */}
+      <section className="section section-light section-with-video">
+        <SectionVideo />
+        <div className="container section-content-overlay">
+          <h2 style={{textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)'}}>Solar: Land vs. Water</h2>
+          <p className="overview-intro" style={{textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem'}}>
+            Floating solar systems (FPV) offer several advantages over traditional ground-mounted photovoltaic (PV) installations, particularly in arid regions where land is scarce and water evaporation rates are high.
           </p>
-          <Link href="/contact" className="btn btn-secondary" style={{marginTop: '2rem'}}>Get In Touch</Link>
+          <div className="values-grid">
+            <div className="value-card">
+              <div className="value-icon">🏞️</div>
+              <h3>Efficient Land Use</h3>
+              <p>FPV enables dual-use of existing water bodies—such as reservoirs, irrigation ponds, and wastewater lagoons—without consuming valuable agricultural land, habitat corridors, or urban development zones.</p>
+            </div>
+            <div className="value-card">
+              <div className="value-icon">⚡</div>
+              <h3>Improved Performance</h3>
+              <p>PV panels deployed over water operate at lower ambient temperatures due to thermal buffering. This cooling effect can enhance panel efficiency by 5–10% relative to land-based systems.</p>
+            </div>
+            <div className="value-card">
+              <div className="value-icon">💧</div>
+              <h3>Water Conservation</h3>
+              <p>Every acre of FPV coverage in New Mexico can save approximately 5.6 acre-feet of water annually by reducing direct surface evaporation through shading and reduced air flow exposure.</p>
+            </div>
+            <div className="value-card">
+              <div className="value-icon">🔌</div>
+              <h3>Infrastructure Synergies</h3>
+              <p>Reservoirs typically have existing infrastructure—access roads, water management personnel, and connections to utilities—significantly reducing development and interconnection costs.</p>
+            </div>
+            <div className="value-card">
+              <div className="value-icon">🌱</div>
+              <h3>Reduced Environmental Impact</h3>
+              <p>FPV installations avoid land clearing, grading, or soil compaction. They require no concrete foundations or perimeter fencing, with minimal vegetation removal or habitat fragmentation.</p>
+            </div>
+            <div className="value-card">
+              <div className="value-icon">☀️</div>
+              <h3>Minimized Obstruction Losses</h3>
+              <p>Open water surfaces offer uniform solar exposure with little risk of obstruction from trees, buildings, or topographic shading, allowing for consistent panel layout and optimized energy yield.</p>
+            </div>
+          </div>
+          <div style={{textAlign: 'center', marginTop: '3rem'}}>
+            <Link href="/f/solar-land-vs-water" className="btn btn-secondary">Learn More</Link>
+          </div>
         </div>
       </section>
 
@@ -178,6 +216,17 @@ export default function Home() {
           })}
         </>
       )}
+
+      {/* Partnership Section - Placeholder */}
+      <section className="section section-dark">
+        <div className="container">
+          <h2>Partner With Us</h2>
+          <p className="overview-intro">
+            Content coming soon. This section will outline partnership opportunities and benefits.
+          </p>
+          <Link href="/contact" className="btn btn-secondary" style={{marginTop: '2rem'}}>Get In Touch</Link>
+        </div>
+      </section>
     </div>
   );
 }
