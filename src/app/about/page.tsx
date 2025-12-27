@@ -1,68 +1,127 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function AboutPage() {
     return (
-        <div>
-            {/* About Us Section - Styled like Political Section */}
-            <section className="section section-light section-with-video" style={{
-                backgroundImage: 'url(/images/AdobeStock_1500691155_Preview.jpeg)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                position: 'relative',
-                minHeight: '80vh',
-                display: 'flex',
-                alignItems: 'center',
-                paddingTop: '8rem', // Account for fixed header
-                paddingBottom: '8rem'
-            }}>
-                {/* Dark Overlay */}
-                <div style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                    zIndex: 0
-                }}></div>
+        <div className="section section-light" style={{ minHeight: '100vh', padding: '4rem 0' }}>
+            <div className="container">
+                {/* Main Page Title */}
+                <h1 style={{
+                    fontSize: 'clamp(2rem, 4vw, 3rem)',
+                    marginBottom: '3rem',
+                    fontFamily: 'DM Sans, sans-serif',
+                    fontWeight: 'normal',
+                    fontStyle: 'italic',
+                    color: '#1a1a1a'
+                }}>
+                    The time is now! <span style={{ fontStyle: 'normal' }}>Current status and team</span>
+                </h1>
 
-                <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-                    <h1 style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)', color: 'white' }}>About Us</h1>
-                    <p className="overview-intro" style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem', color: 'white' }}>
-                        We are dedicated to pioneering sustainable water and energy solutions for the American Southwest.
-                    </p>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'start' }}>
 
-                    <div className="values-grid">
-                        {/* Team Member / Content Placeholders */}
-                        {[1, 2, 3, 4, 5, 6].map((item) => (
-                            <div key={item} className="value-card">
-                                {/* Image Placeholder */}
-                                <div style={{
-                                    width: '100%',
-                                    height: '240px',
-                                    backgroundColor: 'rgba(255,255,255,0.1)',
-                                    marginBottom: '1.5rem',
-                                    borderRadius: '4px',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    border: '1px dashed rgba(255,255,255,0.3)'
-                                }}>
-                                    <span style={{ color: 'rgba(255,255,255,0.7)' }}>Image Placeholder</span>
-                                </div>
+                    {/* Left Column: Current Status */}
+                    <div style={{
+                        backgroundColor: '#e3e8c1', // Approximate light green from screenshot
+                        padding: '2.5rem',
+                        borderRadius: '0',
+                        height: '100%'
+                    }}>
+                        <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem', fontWeight: '700', fontFamily: 'DM Sans, sans-serif' }}>Current status</h2>
 
-                                <h3>Member Name {item}</h3>
-                                <p>Position Title</p>
-                                <p style={{ fontSize: '0.9rem', marginTop: '0.5rem', opacity: 0.8 }}>
-                                    Brief bio or description of role. Specialized expertise in renewable energy and water conservation.
-                                </p>
+                        <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                            <li style={{ marginBottom: '2rem', display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                                <span style={{ fontSize: '1.5rem', lineHeight: '1', marginTop: '-0.2rem' }}>•</span>
+                                <span style={{ fontSize: '1.1rem', lineHeight: '1.4' }}>
+                                    Active relationships with floating solar <strong>technology providers, academic researchers, and financial partners</strong>
+                                </span>
+                            </li>
+                            <li style={{ marginBottom: '2rem', display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                                <span style={{ fontSize: '1.5rem', lineHeight: '1', marginTop: '-0.2rem' }}>•</span>
+                                <span style={{ fontSize: '1.1rem', lineHeight: '1.4' }}>
+                                    Active discussions with <strong>pilot-scale projects and stakeholders in Utah</strong>, including those that could launch before investment tax credits expire
+                                </span>
+                            </li>
+                            <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                                <span style={{ fontSize: '1.5rem', lineHeight: '1', marginTop: '-0.2rem' }}>•</span>
+                                <span style={{ fontSize: '1.1rem', lineHeight: '1.4' }}>
+                                    Currently expanding <strong>relationships with energy, water, and economic development policy makers</strong> (executive and legislative branches)
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Right Column: Team */}
+                    <div style={{ paddingLeft: '2rem', borderLeft: '1px solid #ccc' }}>
+                        <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem', fontWeight: '700', fontFamily: 'DM Sans, sans-serif' }}>Team</h2>
+
+                        {/* Team Member 1: Jim */}
+                        <div style={{ display: 'flex', gap: '2rem', marginBottom: '3rem' }}>
+                            {/* Image Placeholder */}
+                            <div style={{
+                                width: '180px',
+                                height: '180px',
+                                backgroundColor: '#333',
+                                flexShrink: 0,
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                color: 'white',
+                                fontSize: '0.8rem'
+                            }}>
+                                [Jim Image]
                             </div>
-                        ))}
+
+                            <div>
+                                <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', fontWeight: 'normal', fontFamily: 'DM Sans, sans-serif' }}>
+                                    <strong>Jim Anderson</strong>
+                                    <a href="mailto:jim@waterwisesolar.com" style={{ color: 'inherit', textDecoration: 'none', fontStyle: 'italic', opacity: 0.8 }}> (jim@waterwisesolar.com)</a>
+                                </h3>
+                                <p style={{ fontStyle: 'italic', marginBottom: '1rem', fontSize: '1rem' }}>
+                                    Founder and Chief Developer - Water Wise Solar Solutions
+                                </p>
+                                <ul style={{ listStyle: 'disc', paddingLeft: '1.2rem', margin: 0, fontSize: '0.95rem', lineHeight: '1.5' }}>
+                                    <li style={{ marginBottom: '0.5rem' }}>Extensive energy project development experience and relationships</li>
+                                    <li style={{ marginBottom: '0.5rem' }}>Special expertise in complex EPC / delivery</li>
+                                    <li>Univ. Portland (MBA, Energy/ Environment focus); Arizona State University (B.Sc. Business)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/* Team Member 2: Lee */}
+                        <div style={{ display: 'flex', gap: '2rem' }}>
+                            {/* Image Placeholder */}
+                            <div style={{
+                                width: '180px',
+                                height: '180px',
+                                backgroundColor: '#333',
+                                flexShrink: 0,
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                color: 'white',
+                                fontSize: '0.8rem'
+                            }}>
+                                [Lee Image]
+                            </div>
+
+                            <div>
+                                <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', fontWeight: 'normal', fontFamily: 'DM Sans, sans-serif' }}>
+                                    <strong>Lee Addams</strong>
+                                    <a href="mailto:addams@opentrailventures.com" style={{ color: '#0284c7', textDecoration: 'underline' }}> (addams@opentrailventures.com)</a>
+                                </h3>
+                                <p style={{ fontStyle: 'italic', marginBottom: '1rem', fontSize: '1rem' }}>
+                                    Founder, Open Trail Ventures, LLC; Head of Strategy and Growth, WaterWise Solar
+                                </p>
+                                <ul style={{ listStyle: 'disc', paddingLeft: '1.2rem', margin: 0, fontSize: '0.95rem', lineHeight: '1.5' }}>
+                                    <li style={{ marginBottom: '0.5rem' }}>Former public company management team (Valmont Industries); irrigation technology company CEO</li>
+                                    <li style={{ marginBottom: '0.5rem' }}>Advisory experience - McKinsey & Company, EY-Parthenon</li>
+                                    <li>Stanford University (Ph.D Earth Sciences / Hydrology); Brigham Young University (B.Sc. Applied Physics)</li>
+                                </ul>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
     );
 }
