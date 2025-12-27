@@ -72,7 +72,7 @@ export default function Home() {
       <section className="hero-main">
         <HeroVideo />
         <div className="hero-content-overlay">
-          <h1>Innovating in the Intermountain West and Southwest to save water, save land, and accelerate peak matching energy generation</h1>
+          <h1>Innovating in the Colorado River Basin to save water, land, and accelerate clean, peak matching, energy generation.</h1>
         </div>
       </section>
 
@@ -93,13 +93,13 @@ export default function Home() {
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
           zIndex: 0
         }}></div>
-        <div className="container" style={{position: 'relative', zIndex: 1}}>
-          <div style={{maxWidth: '900px', margin: '0 auto', textAlign: 'center'}}>
-            <h2 style={{color: 'white'}}>The Water-Energy Nexus</h2>
-            <p className="overview-intro" style={{color: 'white'}}>
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+            <h2 style={{ color: 'white' }}>The Water-Energy Nexus</h2>
+            <p className="overview-intro" style={{ color: 'white' }}>
               The Colorado River, a vital water source for the American West, is in crisis. Ongoing drought, chronic overuse, and climate pressures have triggered historic water shortages, prompting mandatory cutbacks and urgent calls to rebalance the region's water withdrawals with its dwindling supply.
             </p>
-            <p className="overview-intro" style={{color: 'white'}}>
+            <p className="overview-intro" style={{ color: 'white' }}>
               Floating solar photovoltaic (FPV) systems have been in wide use at large scale in Southeast Asia as a way to double use scarce land. Water Wise SS offers a complementary solution that mitigates evaporative losses from reservoirs while generating clean electricity—without requiring major changes to consumer behavior or infrastructure expansion. Utah, Arizona, and New Mexico, So. Cal with their abundant solar resources, increasing energy demand, constant drought conditions, reliance on the Colorado River and numerous man-made reservoirs, are ideal locations for deployment of this technology.
             </p>
           </div>
@@ -110,15 +110,15 @@ export default function Home() {
       <section className="section section-light section-with-video">
         <SectionVideo />
         <div className="container section-content-overlay">
-          <h2 style={{textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)'}}>Solar: Land vs. Water</h2>
-          <p className="overview-intro" style={{textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem', color: 'white'}}>
+          <h2 style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>Solar: Land vs. Water</h2>
+          <p className="overview-intro" style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem', color: 'white' }}>
             Floating solar systems (FPV) offer several advantages over traditional ground-mounted photovoltaic (PV) installations, particularly in arid regions where land is scarce and water evaporation rates are high.
           </p>
           <div className="values-grid">
             <div className="value-card">
               <div className="value-icon">🏞️</div>
               <h3>Efficient Land Use</h3>
-              <p>FPV enables dual-use of existing water bodies—such as reservoirs, irrigation ponds, and wastewater lagoons—without consuming valuable agricultural land, habitat corridors, or urban development zones.</p>
+              <p>FPV enables dual-use of existing water bodies—such as reservoirs, irrigation ponds, and municipal wastewater or water treatment storage ponds—without consuming valuable agricultural land, habitat corridors, or urban development zones.</p>
             </div>
             <div className="value-card">
               <div className="value-icon">⚡</div>
@@ -150,10 +150,10 @@ export default function Home() {
       </section>
 
       {/* FPV & Water Conservation Section */}
-      <section className="section section-light">
+      <section className="section section-light section-with-video">
         <div className="container">
-          <h2 style={{textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)'}}>FPV & Water Conservation</h2>
-          <p className="overview-intro" style={{textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem'}}>
+          <h2 style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>FPV & Water Conservation</h2>
+          <p className="overview-intro" style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem' }}>
             Floating solar arrays provide a scientifically-validated approach to reducing evaporative water loss from reservoirs while generating clean electricity.
           </p>
           <div className="values-grid">
@@ -192,10 +192,25 @@ export default function Home() {
       </section>
 
       {/* Political & Regulatory Section */}
-      <section className="section section-light">
-        <div className="container">
-          <h2 style={{textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)'}}>Political, Social, Economic, and Regulatory Considerations</h2>
-          <p className="overview-intro" style={{textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem'}}>
+      <section className="section section-light section-with-video" style={{
+        backgroundImage: 'url(/images/AdobeStock_1500691155_Preview.jpeg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        position: 'relative'
+      }}>
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          zIndex: 0
+        }}></div>
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <h2 style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)', color: 'white' }}>Political, Social, Economic, and Regulatory Considerations</h2>
+          <p className="overview-intro" style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem', color: 'white' }}>
             Successful FPV deployment requires navigating complex political landscapes while balancing stakeholder interests and building community support.
           </p>
           <div className="values-grid">
@@ -230,17 +245,17 @@ export default function Home() {
               <p>Phased development allows communities to validate technical and political viability of each site before full build-out, building local confidence.</p>
             </div>
           </div>
-          <div style={{textAlign: 'center', marginTop: '3rem'}}>
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
             <Link href="/f/political-social-economic-and-regulatory-considerations" className="btn btn-secondary">Learn More</Link>
           </div>
         </div>
       </section>
 
       {/* International FPV Arrays Section */}
-      <section className="section section-dark">
+      <section className="section section-dark section-with-video">
         <div className="container">
-          <h2 style={{textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)'}}>Notable International FPV Arrays with Local Application</h2>
-          <p className="overview-intro" style={{textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem'}}>
+          <h2 style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>Notable International FPV Arrays with Local Application</h2>
+          <p className="overview-intro" style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem' }}>
             Global FPV deployments demonstrate proven technical viability and provide valuable lessons for American Southwest implementation.
           </p>
           <div className="values-grid">
@@ -275,17 +290,17 @@ export default function Home() {
               <p>U.S. can leverage international lessons while adapting to unique Western water challenges, recreational demand, and grid infrastructure constraints.</p>
             </div>
           </div>
-          <div style={{textAlign: 'center', marginTop: '3rem'}}>
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
             <Link href="/f/notable-international-fpv-arrays-with-local-application" className="btn btn-secondary">Learn More</Link>
           </div>
         </div>
       </section>
 
       {/* Environmental & Permitting Section */}
-      <section className="section section-light">
+      <section className="section section-light section-with-video">
         <div className="container">
-          <h2 style={{textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)'}}>Environmental, Recreational and Permitting Factors</h2>
-          <p className="overview-intro" style={{textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem'}}>
+          <h2 style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>Environmental, Recreational and Permitting Factors</h2>
+          <p className="overview-intro" style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem' }}>
             Deploying FPV systems requires careful consideration of environmental impacts, recreational access, and regulatory compliance to ensure community acceptance.
           </p>
           <div className="values-grid">
@@ -320,17 +335,17 @@ export default function Home() {
               <p>Stakeholder input balances community recreation priorities with energy production goals requiring transparent communication and adaptive design.</p>
             </div>
           </div>
-          <div style={{textAlign: 'center', marginTop: '3rem'}}>
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
             <Link href="/f/environmental-recreational-and-permitting-factors" className="btn btn-secondary">Learn More</Link>
           </div>
         </div>
       </section>
 
       {/* Introduction Section */}
-      <section className="section section-dark">
+      <section className="section section-dark section-with-video">
         <div className="container">
-          <h2 style={{textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)'}}>Introduction to Floating Solar</h2>
-          <p className="overview-intro" style={{textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem'}}>
+          <h2 style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>Introduction to Floating Solar</h2>
+          <p className="overview-intro" style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem' }}>
             Floating photovoltaic technology offers a comprehensive solution to the interconnected challenges of water scarcity and renewable energy generation in the American Southwest.
           </p>
           <div className="values-grid">
@@ -365,7 +380,7 @@ export default function Home() {
               <p>Site selection considers snow load, generation potential, water conservation, recreational use, permitting, grid proximity, and economic feasibility.</p>
             </div>
           </div>
-          <div style={{textAlign: 'center', marginTop: '3rem'}}>
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
             <Link href="/f/introduction" className="btn btn-secondary">Learn More</Link>
           </div>
         </div>
@@ -375,11 +390,11 @@ export default function Home() {
       {articles.length > 0 && (
         <section className="section section-light">
           <div className="container">
-            <h2 style={{textAlign: 'center', marginBottom: '3rem'}}>Articles & Insights</h2>
-            <ul style={{listStyle: 'none', padding: 0, maxWidth: '800px', margin: '0', textAlign: 'left'}}>
+            <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Articles & Insights</h2>
+            <ul style={{ listStyle: 'none', padding: 0, maxWidth: '800px', margin: '0', textAlign: 'left' }}>
               {articles.map((article, index) => (
-                <li key={index} style={{marginBottom: '1rem'}}>
-                  <Link href={`/${article.slug}`} style={{fontSize: '1.25rem', textDecoration: 'none', color: 'var(--primary)'}}>
+                <li key={index} style={{ marginBottom: '1rem' }}>
+                  <Link href={`/${article.slug}`} style={{ fontSize: '1.25rem', textDecoration: 'none', color: 'var(--primary)' }}>
                     {article.title}
                   </Link>
                 </li>
@@ -396,7 +411,7 @@ export default function Home() {
           <p className="overview-intro">
             Content coming soon. This section will outline partnership opportunities and benefits.
           </p>
-          <Link href="/contact" className="btn btn-secondary" style={{marginTop: '2rem'}}>Get In Touch</Link>
+          <Link href="/contact" className="btn btn-secondary" style={{ marginTop: '2rem' }}>Get In Touch</Link>
         </div>
       </section>
     </div>
