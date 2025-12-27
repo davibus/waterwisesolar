@@ -72,7 +72,7 @@ export default function Home() {
       <section className="hero-main">
         <HeroVideo />
         <div className="hero-content-overlay">
-          <h1>Innovating in the Intermountain West and Southwest to save water, save land, and accelerate peak matching energy generation</h1>
+          <h1>Innovating in the Colorado River Basin to save water, land, and accelerate clean, peak matching, energy generation.</h1>
         </div>
       </section>
 
