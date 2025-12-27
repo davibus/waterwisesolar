@@ -9,7 +9,6 @@ export default function Header() {
                         Water Wise Solar Solutions
                     </Link>
                     <div className="nav-links">
-                        <Link href="/">Home</Link>
                         <Link href="/problem-solution">The Problem & Solution</Link>
                         <Link href="/technology">Technology</Link>
                         <Link href="/priority-sites">Priority Sites</Link>
