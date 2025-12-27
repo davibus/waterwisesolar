@@ -13,6 +13,7 @@ export default function Header() {
                         <Link href="/problem-solution">The Problem & Solution</Link>
                         <Link href="/technology">Technology</Link>
                         <Link href="/priority-sites">Priority Sites</Link>
+                        <Link href="/gallery">Gallery</Link>
                         <Link href="/about">About Us</Link>
                         <Link href="/contact">Contact</Link>
                     </div>
