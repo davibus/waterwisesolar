@@ -14,7 +14,6 @@ export default function Header() {
                         <Link href="/priority-sites">Priority Sites</Link>
                         <Link href="/gallery">Gallery</Link>
                         <Link href="/about">About Us</Link>
-                        <Link href="/contact">Contact</Link>
                     </div>
                 </nav>
             </div>
