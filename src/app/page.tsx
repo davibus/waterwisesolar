@@ -118,7 +118,7 @@ export default function Home() {
             <div className="value-card">
               <div className="value-icon">🏞️</div>
               <h3>Efficient Land Use</h3>
-              <p>FPV enables dual-use of existing water bodies—such as reservoirs, irrigation ponds, and wastewater lagoons—without consuming valuable agricultural land, habitat corridors, or urban development zones.</p>
+              <p>FPV enables dual-use of existing water bodies—such as reservoirs, irrigation ponds, and municipal wastewater or water treatment storage ponds—without consuming valuable agricultural land, habitat corridors, or urban development zones.</p>
             </div>
             <div className="value-card">
               <div className="value-icon">⚡</div>
