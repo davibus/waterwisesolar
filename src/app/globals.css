@@ -716,6 +716,19 @@ footer a:hover {
   font-size: 0.95rem;
 }
 
+.section-with-video .value-card {
+  background: rgba(0, 0, 0, 0.85); /* Black background with slight transparency */
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.section-with-video .value-card h3 {
+  color: #ffffff;
+}
+
+.section-with-video .value-card p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
 /* Triple Bottom Line Section */
 .section-triple-bottom {
   background: var(--light-bg);

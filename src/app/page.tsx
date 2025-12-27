@@ -73,37 +73,35 @@ export default function Home() {
         <HeroVideo />
         <div className="hero-content-overlay">
           <h1>Innovating in the Intermountain West and Southwest to save water, save land, and accelerate peak matching energy generation</h1>
-          <Link href="/technology" className="btn btn-primary">Learn About Floating Solar</Link>
-        </div>
-        <div className="hero-image-caption">
-          Mountain Regional Water Treatment plant, Summit County, UT 2024
         </div>
       </section>
 
       {/* Introduction Section */}
-      <section className="section section-warm">
-        <div className="container">
-          <div className="two-column-layout">
-            <div className="column-text">
-              <h2>The Water-Energy Nexus</h2>
-              <p className="overview-intro">
-                The Colorado River, a vital water source for the American West, is in crisis. Ongoing drought, chronic overuse, and climate pressures have triggered historic water shortages, prompting mandatory cutbacks and urgent calls to rebalance the region's water withdrawals with its dwindling supply.
-              </p>
-              <p className="overview-intro">
-                Floating solar photovoltaic (FPV) systems offer a complementary solution that mitigates evaporative losses from reservoirs while generating clean electricity—without requiring major changes to consumer behavior or infrastructure expansion. Utah, Arizona, and New Mexico, with their abundant solar resources, constant drought conditions, and numerous man-made reservoirs, are ideal locations for this technology.
-              </p>
-            </div>
-            <div className="column-image">
-              <Image
-                src="/images/introduction-picture.jpg"
-                alt="Floating solar panels on reservoir - innovative water-wise renewable energy technology"
-                width={1200}
-                height={800}
-                quality={85}
-                priority
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
+      <section className="section section-warm" style={{
+        backgroundImage: 'url(/images/AdobeStock_1615928997_Preview.jpeg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        position: 'relative'
+      }}>
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          zIndex: 0
+        }}></div>
+        <div className="container" style={{position: 'relative', zIndex: 1}}>
+          <div style={{maxWidth: '900px', margin: '0 auto', textAlign: 'center'}}>
+            <h2 style={{color: 'white'}}>The Water-Energy Nexus</h2>
+            <p className="overview-intro" style={{color: 'white'}}>
+              The Colorado River, a vital water source for the American West, is in crisis. Ongoing drought, chronic overuse, and climate pressures have triggered historic water shortages, prompting mandatory cutbacks and urgent calls to rebalance the region's water withdrawals with its dwindling supply.
+            </p>
+            <p className="overview-intro" style={{color: 'white'}}>
+              Floating solar photovoltaic (FPV) systems have been in wide use at large scale in Southeast Asia as a way to double use scarce land. Water Wise SS offers a complementary solution that mitigates evaporative losses from reservoirs while generating clean electricity—without requiring major changes to consumer behavior or infrastructure expansion. Utah, Arizona, and New Mexico, So. Cal with their abundant solar resources, increasing energy demand, constant drought conditions, reliance on the Colorado River and numerous man-made reservoirs, are ideal locations for deployment of this technology.
+            </p>
           </div>
         </div>
       </section>
@@ -113,7 +111,7 @@ export default function Home() {
         <SectionVideo />
         <div className="container section-content-overlay">
           <h2 style={{textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)'}}>Solar: Land vs. Water</h2>
-          <p className="overview-intro" style={{textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem'}}>
+          <p className="overview-intro" style={{textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem', color: 'white'}}>
             Floating solar systems (FPV) offer several advantages over traditional ground-mounted photovoltaic (PV) installations, particularly in arid regions where land is scarce and water evaporation rates are high.
           </p>
           <div className="values-grid">
@@ -125,17 +123,17 @@ export default function Home() {
             <div className="value-card">
               <div className="value-icon">⚡</div>
               <h3>Improved Performance</h3>
-              <p>PV panels deployed over water operate at lower ambient temperatures due to thermal buffering. This cooling effect can enhance panel efficiency by 5–10% relative to land-based systems.</p>
+              <p>PV panels deployed over water operate at lower ambient temperatures due to thermal buffering. This cooling effect can enhance panel efficiency by 6%-12% relative to land-based systems.</p>
             </div>
             <div className="value-card">
               <div className="value-icon">💧</div>
               <h3>Water Conservation</h3>
-              <p>Every acre of FPV coverage in New Mexico can save approximately 5.6 acre-feet of water annually by reducing direct surface evaporation through shading and reduced air flow exposure.</p>
+              <p>Every acre of FPV coverage in Utah can save approximately 4.6 acre-feet of water annually, per acre covered by reducing direct surface evaporation through shading and reduced air flow exposure.</p>
             </div>
             <div className="value-card">
               <div className="value-icon">🔌</div>
               <h3>Infrastructure Synergies</h3>
-              <p>Reservoirs typically have existing infrastructure—access roads, water management personnel, and connections to utilities—significantly reducing development and interconnection costs.</p>
+              <p>Reservoirs often are close to existing infrastructure—have existing access roads, water management personnel, and are already disturbed land—significantly reducing development and interconnection costs.</p>
             </div>
             <div className="value-card">
               <div className="value-icon">🌱</div>
@@ -147,54 +145,6 @@ export default function Home() {
               <h3>Minimized Obstruction Losses</h3>
               <p>Open water surfaces offer uniform solar exposure with little risk of obstruction from trees, buildings, or topographic shading, allowing for consistent panel layout and optimized energy yield.</p>
             </div>
-          </div>
-          <div style={{textAlign: 'center', marginTop: '3rem'}}>
-            <Link href="/f/solar-land-vs-water" className="btn btn-secondary">Learn More</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* FPV Size and Business Case Section */}
-      <section className="section section-dark">
-        <div className="container">
-          <h2 style={{textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)'}}>FPV Size and Business Case</h2>
-          <p className="overview-intro" style={{textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem'}}>
-            Understanding the economics and technical specifications of floating photovoltaic systems is essential for successful deployment and financing.
-          </p>
-          <div className="values-grid">
-            <div className="value-card">
-              <div className="value-icon">📏</div>
-              <h3>Sizing Standard</h3>
-              <p>A 20 MW floating solar array requires approximately 35-40 acres of open water surface, with conservative planning of ~2.0 acres per MW.</p>
-            </div>
-            <div className="value-card">
-              <div className="value-icon">💰</div>
-              <h3>Capital Investment</h3>
-              <p>Estimated total installed cost of ~$40 million for 20 MW ($2 million per MW), based on proven U.S. installations like Healdsburg, California.</p>
-            </div>
-            <div className="value-card">
-              <div className="value-icon">⚡</div>
-              <h3>Energy Production</h3>
-              <p>New Mexico systems produce approximately 1.75 million kWh per installed MW annually; Utah 1.6 million kWh; Arizona 1.9 million kWh per year.</p>
-            </div>
-            <div className="value-card">
-              <div className="value-icon">🔌</div>
-              <h3>Grid Constraints</h3>
-              <p>Maximum array sizing is limited by available transmission infrastructure, transformer ratings, and line ampacity requiring formal utility studies.</p>
-            </div>
-            <div className="value-card">
-              <div className="value-icon">📊</div>
-              <h3>Phased Deployment Strategy</h3>
-              <p>Implementation in phases reduces risk, enables proof-of-concept testing, minimizes visual disruption, and allows regulatory iteration.</p>
-            </div>
-            <div className="value-card">
-              <div className="value-icon">💵</div>
-              <h3>Proven Financing Model</h3>
-              <p>A 1-acre FPV system ($2M) generating 1.75 GWh annually yields ~$210K revenue (electricity + renewable credits) supporting debt service on 20-year loans at ~6.4% rates.</p>
-            </div>
-          </div>
-          <div style={{textAlign: 'center', marginTop: '3rem'}}>
-            <Link href="/f/fpv-size-and-business-case" className="btn btn-secondary">Learn More</Link>
           </div>
         </div>
       </section>
@@ -210,7 +160,7 @@ export default function Home() {
             <div className="value-card">
               <div className="value-icon">💧</div>
               <h3>Massive Evaporation Problem</h3>
-              <p>Lake Mead loses 800,000 acre-feet annually (~6% of Colorado River flow) and Lake Powell loses nearly 860,000 acre-feet from evaporation and seepage.</p>
+              <p>Lake Mead loses 800,000 acre-feet annually (~6% of Colorado River flow) and Lake Powell loses nearly 860,000 acre-feet from evaporation and seepage. Evaporation is 30% of the total use of Colorado River Basin water.</p>
             </div>
             <div className="value-card">
               <div className="value-icon">📈</div>
@@ -225,66 +175,18 @@ export default function Home() {
             <div className="value-card">
               <div className="value-icon">🤝</div>
               <h3>Complementary Strategy</h3>
-              <p>FPV doesn't require difficult behavior changes in agriculture or cities, offering an alternative to expensive water buyback programs ($360/acre-foot in Utah).</p>
+              <p>FPV doesn't require difficult behavior changes in agriculture or cities, offering an alternative to expensive water buyback programs ($360 per acre ft in Utah, PER YEAR).</p>
             </div>
             <div className="value-card">
               <div className="value-icon">🛡️</div>
               <h3>Multi-Benefit Protection</h3>
-              <p>FPV improves water quality, reduces water movement erosion, minimizes dust accumulation, and preserves water quantity simultaneously.</p>
+              <p>FPV improves water quality, reduces water temperature, reduces water movement erosion, minimizes dust accumulation, and preserves water quantity simultaneously.</p>
             </div>
             <div className="value-card">
               <div className="value-icon">🌊</div>
               <h3>Basin-Wide Advantage</h3>
               <p>Water conservation from FPV benefits all Colorado River states through shared resource protection without requiring cross-border policy coordination.</p>
             </div>
-          </div>
-          <div style={{textAlign: 'center', marginTop: '3rem'}}>
-            <Link href="/f/fpv-water-conservation" className="btn btn-secondary">Learn More</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Electricity Pricing, PPAs Section */}
-      <section className="section section-dark">
-        <div className="container">
-          <h2 style={{textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)'}}>Electricity Pricing, PPAs and Government Programs</h2>
-          <p className="overview-intro" style={{textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem'}}>
-            Successfully financing and operating FPV projects requires understanding power purchase agreements, market pricing structures, and available government incentives.
-          </p>
-          <div className="values-grid">
-            <div className="value-card">
-              <div className="value-icon">📄</div>
-              <h3>PPA Foundation</h3>
-              <p>Long-term Power Purchase Agreements (10-25 years) guarantee fixed electricity prices, securing project financing while minimizing market volatility exposure.</p>
-            </div>
-            <div className="value-card">
-              <div className="value-icon">💹</div>
-              <h3>Market Pricing Benchmarks</h3>
-              <p>California's CAISO publishes day-ahead and real-time market data serving as pricing reference for Southwest renewable energy sales and PPA structuring.</p>
-            </div>
-            <div className="value-card">
-              <div className="value-icon">⚙️</div>
-              <h3>Baseload Preference</h3>
-              <p>Clean Energy Buyers Association pushes for "firmed energy" delivery, favoring technologies with consistency over intermittent solar/wind alone.</p>
-            </div>
-            <div className="value-card">
-              <div className="value-icon">🏛️</div>
-              <h3>REAP Funding Pause</h3>
-              <p>USDA's Rural Energy for America Program (traditionally supporting rural FPV) was suspended under Trump administration, eliminating key guaranteed loan source.</p>
-            </div>
-            <div className="value-card">
-              <div className="value-icon">🌱</div>
-              <h3>Alternative Incentives Available</h3>
-              <p>Environmental Quality Incentives Program (EQIP) under USDA Natural Resources Conservation Service offers cost-share grants for water conservation projects.</p>
-            </div>
-            <div className="value-card">
-              <div className="value-icon">🚀</div>
-              <h3>Hidden Opportunity Costs</h3>
-              <p>Removing NEPA compliance and Phase I Environmental Assessments from federal programs streamlines smaller municipal FPV projects on previously disturbed land.</p>
-            </div>
-          </div>
-          <div style={{textAlign: 'center', marginTop: '3rem'}}>
-            <Link href="/f/electricity-pricing-ppas-and-government-programs" className="btn btn-secondary">Learn More</Link>
           </div>
         </div>
       </section>
