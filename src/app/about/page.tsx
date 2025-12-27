@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function AboutPage() {
     return (
-        <div className="section section-light" style={{ minHeight: '100vh', padding: '4rem 0' }}>
+        <div className="section section-light" style={{ minHeight: '100vh', padding: '4rem 0', textAlign: 'left' }}>
             <div className="container">
                 {/* Main Page Title */}
                 <h1 style={{
@@ -11,7 +11,8 @@ export default function AboutPage() {
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 'normal',
                     fontStyle: 'italic',
-                    color: '#1a1a1a'
+                    color: '#1a1a1a',
+                    textAlign: 'left'
                 }}>
                     The time is now! <span style={{ fontStyle: 'normal' }}>Current status and team</span>
                 </h1>
@@ -23,11 +24,12 @@ export default function AboutPage() {
                         backgroundColor: '#e3e8c1', // Approximate light green from screenshot
                         padding: '2.5rem',
                         borderRadius: '0',
-                        height: '100%'
+                        height: '100%',
+                        textAlign: 'left'
                     }}>
-                        <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem', fontWeight: '700', fontFamily: 'DM Sans, sans-serif' }}>Current status</h2>
+                        <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem', fontWeight: '700', fontFamily: 'DM Sans, sans-serif', textAlign: 'left' }}>Current status</h2>
 
-                        <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                        <ul style={{ listStyle: 'none', padding: 0, margin: 0, textAlign: 'left' }}>
                             <li style={{ marginBottom: '2rem', display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                                 <span style={{ fontSize: '1.5rem', lineHeight: '1', marginTop: '-0.2rem' }}>•</span>
                                 <span style={{ fontSize: '1.1rem', lineHeight: '1.4' }}>
@@ -50,8 +52,8 @@ export default function AboutPage() {
                     </div>
 
                     {/* Right Column: Team */}
-                    <div style={{ paddingLeft: '2rem', borderLeft: '1px solid #ccc' }}>
-                        <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem', fontWeight: '700', fontFamily: 'DM Sans, sans-serif' }}>Team</h2>
+                    <div style={{ paddingLeft: '2rem', borderLeft: '1px solid #ccc', textAlign: 'left' }}>
+                        <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem', fontWeight: '700', fontFamily: 'DM Sans, sans-serif', textAlign: 'left' }}>Team</h2>
 
                         {/* Team Member 1: Jim */}
                         <div style={{ display: 'flex', gap: '2rem', marginBottom: '3rem' }}>
@@ -71,14 +73,14 @@ export default function AboutPage() {
                             </div>
 
                             <div>
-                                <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', fontWeight: 'normal', fontFamily: 'DM Sans, sans-serif' }}>
+                                <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', fontWeight: 'normal', fontFamily: 'DM Sans, sans-serif', textAlign: 'left' }}>
                                     <strong>Jim Anderson</strong>
                                     <a href="mailto:jim@waterwisesolar.com" style={{ color: 'inherit', textDecoration: 'none', fontStyle: 'italic', opacity: 0.8 }}> (jim@waterwisesolar.com)</a>
                                 </h3>
-                                <p style={{ fontStyle: 'italic', marginBottom: '1rem', fontSize: '1rem' }}>
+                                <p style={{ fontStyle: 'italic', marginBottom: '1rem', fontSize: '1rem', textAlign: 'left' }}>
                                     Founder and Chief Developer - Water Wise Solar Solutions
                                 </p>
-                                <ul style={{ listStyle: 'disc', paddingLeft: '1.2rem', margin: 0, fontSize: '0.95rem', lineHeight: '1.5' }}>
+                                <ul style={{ listStyle: 'disc', paddingLeft: '1.2rem', margin: 0, fontSize: '0.95rem', lineHeight: '1.5', textAlign: 'left' }}>
                                     <li style={{ marginBottom: '0.5rem' }}>Extensive energy project development experience and relationships</li>
                                     <li style={{ marginBottom: '0.5rem' }}>Special expertise in complex EPC / delivery</li>
                                     <li>Univ. Portland (MBA, Energy/ Environment focus); Arizona State University (B.Sc. Business)</li>
@@ -104,14 +106,14 @@ export default function AboutPage() {
                             </div>
 
                             <div>
-                                <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', fontWeight: 'normal', fontFamily: 'DM Sans, sans-serif' }}>
+                                <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', fontWeight: 'normal', fontFamily: 'DM Sans, sans-serif', textAlign: 'left' }}>
                                     <strong>Lee Addams</strong>
                                     <a href="mailto:addams@opentrailventures.com" style={{ color: '#0284c7', textDecoration: 'underline' }}> (addams@opentrailventures.com)</a>
                                 </h3>
-                                <p style={{ fontStyle: 'italic', marginBottom: '1rem', fontSize: '1rem' }}>
+                                <p style={{ fontStyle: 'italic', marginBottom: '1rem', fontSize: '1rem', textAlign: 'left' }}>
                                     Founder, Open Trail Ventures, LLC; Head of Strategy and Growth, WaterWise Solar
                                 </p>
-                                <ul style={{ listStyle: 'disc', paddingLeft: '1.2rem', margin: 0, fontSize: '0.95rem', lineHeight: '1.5' }}>
+                                <ul style={{ listStyle: 'disc', paddingLeft: '1.2rem', margin: 0, fontSize: '0.95rem', lineHeight: '1.5', textAlign: 'left' }}>
                                     <li style={{ marginBottom: '0.5rem' }}>Former public company management team (Valmont Industries); irrigation technology company CEO</li>
                                     <li style={{ marginBottom: '0.5rem' }}>Advisory experience - McKinsey & Company, EY-Parthenon</li>
                                     <li>Stanford University (Ph.D Earth Sciences / Hydrology); Brigham Young University (B.Sc. Applied Physics)</li>
