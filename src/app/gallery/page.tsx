@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function GalleryPage() {
     // Shared styles
@@ -114,7 +115,15 @@ export default function GalleryPage() {
                             <div style={imageGridStyle}>
                                 {/* Image 1 */}
                                 <div>
-                                    <div style={imagePlaceholderStyle}>[Healdsburg Image]</div>
+                                    <div style={{ ...imagePlaceholderStyle, backgroundColor: 'transparent', padding: 0 }}>
+                                        <Image
+                                            src="/images/healdsburg pic.jpeg"
+                                            alt="Healdsburg, CA floating solar installation"
+                                            width={600}
+                                            height={338}
+                                            style={{ width: '100%', height: 'auto', borderRadius: '4px' }}
+                                        />
+                                    </div>
                                     <ul style={{ ...listStyle, fontWeight: 'bold' }}>
                                         <li>Healdsburg, CA 4.7 MW</li>
                                         <li>Gray water storage pond</li>
@@ -122,7 +131,15 @@ export default function GalleryPage() {
                                 </div>
                                 {/* Image 2 */}
                                 <div>
-                                    <div style={imagePlaceholderStyle}>[Windsor Image]</div>
+                                    <div style={{ ...imagePlaceholderStyle, backgroundColor: 'transparent', padding: 0 }}>
+                                        <Image
+                                            src="/images/1x2-windsor-CA.jpg"
+                                            alt="Windsor, CA floating solar installation"
+                                            width={600}
+                                            height={338}
+                                            style={{ width: '100%', height: 'auto', borderRadius: '4px' }}
+                                        />
+                                    </div>
                                     <ul style={{ ...listStyle, fontWeight: 'bold' }}>
                                         <li>Windsor, CA 1.8 MW..</li>
                                         <li>"Recycled" water pond</li>
@@ -130,7 +147,15 @@ export default function GalleryPage() {
                                 </div>
                                 {/* Image 3 */}
                                 <div>
-                                    <div style={imagePlaceholderStyle}>[Park City Image]</div>
+                                    <div style={{ ...imagePlaceholderStyle, backgroundColor: 'transparent', padding: 0 }}>
+                                        <Image
+                                            src="/images/2x1-park-city-UT.jpg"
+                                            alt="Park City, UT floating solar installation"
+                                            width={600}
+                                            height={338}
+                                            style={{ width: '100%', height: 'auto', borderRadius: '4px' }}
+                                        />
+                                    </div>
                                     <ul style={{ ...listStyle, fontWeight: 'bold' }}>
                                         <li>Park City, UT 0.6 MW</li>
                                         <li>Raw Water Storage Pond</li>
@@ -138,7 +163,15 @@ export default function GalleryPage() {
                                 </div>
                                 {/* Image 4 */}
                                 <div>
-                                    <div style={imagePlaceholderStyle}>[Sayreville Image]</div>
+                                    <div style={{ ...imagePlaceholderStyle, backgroundColor: 'transparent', padding: 0 }}>
+                                        <Image
+                                            src="/images/2x2-sayreville-NJ.jpg"
+                                            alt="Sayreville, NJ floating solar installation"
+                                            width={600}
+                                            height={338}
+                                            style={{ width: '100%', height: 'auto', borderRadius: '4px' }}
+                                        />
+                                    </div>
                                     <ul style={{ ...listStyle, fontWeight: 'bold' }}>
                                         <li>Sayreville, NJ, 4.4 MW</li>
                                         <li>Raw water storage pond</li>
@@ -181,34 +214,66 @@ export default function GalleryPage() {
                             <div style={imageGridStyle}>
                                 {/* Image 1 */}
                                 <div>
-                                    <div style={imagePlaceholderStyle}>[Example Image 1]</div>
+                                    <div style={{ ...imagePlaceholderStyle, backgroundColor: 'transparent', padding: 0 }}>
+                                        <Image
+                                            src="/images/2-1x1-west-java-indonesia.jpg"
+                                            alt="West Java, Indonesia floating solar installation"
+                                            width={600}
+                                            height={338}
+                                            style={{ width: '100%', height: 'auto', borderRadius: '4px' }}
+                                        />
+                                    </div>
                                     <ul style={{ ...listStyle, fontWeight: 'bold' }}>
-                                        <li>Location 1, 2.5 MW</li>
-                                        <li>Irrigation Reservoir</li>
+                                        <li>West Java, Indonesia, 192 MW</li>
+                                        <li>Hydroelectric Reservoir</li>
                                     </ul>
                                 </div>
                                 {/* Image 2 */}
                                 <div>
-                                    <div style={imagePlaceholderStyle}>[Example Image 2]</div>
+                                    <div style={{ ...imagePlaceholderStyle, backgroundColor: 'transparent', padding: 0 }}>
+                                        <Image
+                                            src="/images/2-1x2-three-gorges-new-energy-china.jpg"
+                                            alt="Three Gorges New Energy, China floating solar installation"
+                                            width={600}
+                                            height={338}
+                                            style={{ width: '100%', height: 'auto', borderRadius: '4px' }}
+                                        />
+                                    </div>
                                     <ul style={{ ...listStyle, fontWeight: 'bold' }}>
-                                        <li>Location 2, 5.0 MW</li>
+                                        <li>Three Gorges New Energy, China, 70 MW</li>
                                         <li>Hydroelectric Basin</li>
                                     </ul>
                                 </div>
                                 {/* Image 3 */}
                                 <div>
-                                    <div style={imagePlaceholderStyle}>[Example Image 3]</div>
+                                    <div style={{ ...imagePlaceholderStyle, backgroundColor: 'transparent', padding: 0 }}>
+                                        <Image
+                                            src="/images/2-2x1-china.jpg"
+                                            alt="China floating solar installation"
+                                            width={600}
+                                            height={338}
+                                            style={{ width: '100%', height: 'auto', borderRadius: '4px' }}
+                                        />
+                                    </div>
                                     <ul style={{ ...listStyle, fontWeight: 'bold' }}>
-                                        <li>Location 3, 1.2 MW</li>
-                                        <li>Wastewater Treatment</li>
+                                        <li>China, 150 MW</li>
+                                        <li>Aquaculture Integration</li>
                                     </ul>
                                 </div>
                                 {/* Image 4 */}
                                 <div>
-                                    <div style={imagePlaceholderStyle}>[Example Image 4]</div>
+                                    <div style={{ ...imagePlaceholderStyle, backgroundColor: 'transparent', padding: 0 }}>
+                                        <Image
+                                            src="/images/2-2x2-zhejiang-china.jpg"
+                                            alt="Zhejiang, China floating solar installation"
+                                            width={600}
+                                            height={338}
+                                            style={{ width: '100%', height: 'auto', borderRadius: '4px' }}
+                                        />
+                                    </div>
                                     <ul style={{ ...listStyle, fontWeight: 'bold' }}>
-                                        <li>Location 4, 3.8 MW</li>
-                                        <li>Industrial Cooling Pond</li>
+                                        <li>Zhejiang, China, 200 MW</li>
+                                        <li>Aquaculture Integration</li>
                                     </ul>
                                 </div>
                             </div>

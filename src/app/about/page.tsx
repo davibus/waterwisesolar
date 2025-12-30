@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function AboutPage() {
     return (
@@ -57,19 +58,21 @@ export default function AboutPage() {
 
                         {/* Team Member 1: Jim */}
                         <div style={{ display: 'flex', gap: '2rem', marginBottom: '3rem' }}>
-                            {/* Image Placeholder */}
+                            {/* Image */}
                             <div style={{
                                 width: '180px',
                                 height: '180px',
-                                backgroundColor: '#333',
                                 flexShrink: 0,
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                color: 'white',
-                                fontSize: '0.8rem'
+                                position: 'relative',
+                                overflow: 'hidden'
                             }}>
-                                [Jim Image]
+                                <Image
+                                    src="/images/jimmy-anderson.png"
+                                    alt="Jim Anderson"
+                                    width={180}
+                                    height={180}
+                                    style={{ objectFit: 'cover' }}
+                                />
                             </div>
 
                             <div>
@@ -90,19 +93,21 @@ export default function AboutPage() {
 
                         {/* Team Member 2: Lee */}
                         <div style={{ display: 'flex', gap: '2rem' }}>
-                            {/* Image Placeholder */}
+                            {/* Image */}
                             <div style={{
                                 width: '180px',
                                 height: '180px',
-                                backgroundColor: '#333',
                                 flexShrink: 0,
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                color: 'white',
-                                fontSize: '0.8rem'
+                                position: 'relative',
+                                overflow: 'hidden'
                             }}>
-                                [Lee Image]
+                                <Image
+                                    src="/images/lee-addams.jpg"
+                                    alt="Lee Addams"
+                                    width={180}
+                                    height={180}
+                                    style={{ objectFit: 'cover' }}
+                                />
                             </div>
 
                             <div>
