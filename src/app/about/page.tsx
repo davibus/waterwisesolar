@@ -15,7 +15,7 @@ export default function AboutPage() {
                     color: '#1a1a1a',
                     textAlign: 'left'
                 }}>
-                    The time is now! <span style={{ fontStyle: 'normal' }}>Current status and team</span>
+                    About Us
                 </h1>
 
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'start' }}>

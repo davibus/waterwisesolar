@@ -525,9 +525,29 @@ footer a:hover {
   opacity: 1;
 }
 
+/* Section with Background Image */
+.section-with-background-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-background-image {
+  z-index: 0;
+}
+
+.section-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
 .section-content-overlay {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-content-overlay {
@@ -843,6 +863,425 @@ footer a:hover {
   width: 100%;
 }
 
+/* Introduction to Floating Solar - Custom styling */
+.intro-floating-solar-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.intro-floating-solar-card {
+  padding: clamp(2rem, 5vw, 4.5rem);
+}
+
+/* Introduction to Floating Solar - Asymmetric Editorial Layout */
+.intro-floating-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.intro-floating-section .container {
+  margin: 0;
+  margin-left: 0;
+  max-width: 100%;
+}
+
+.intro-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+}
+
+.intro-floating-layout {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 80vh;
+  padding-top: clamp(3rem, 6vh, 5rem);
+  padding-left: 50px;
+}
+
+.intro-floating-content {
+  max-width: clamp(500px, 45vw, 700px);
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.intro-floating-title {
+  color: white;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.intro-floating-description {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: clamp(1.125rem, 1.8vw, 1.35rem);
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  text-align: left;
+  max-width: 90%;
+}
+
+.intro-floating-cards {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.intro-card {
+  background: transparent;
+  backdrop-filter: none;
+  border: none;
+  border-radius: 0;
+  padding: clamp(1.75rem, 3vw, 2.5rem) 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: none;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.intro-card:hover {
+  background: transparent;
+  border-color: transparent;
+  transform: translateX(8px);
+  box-shadow: none;
+}
+
+.intro-card:hover .intro-card-icon {
+  transform: scale(1.15) rotate(5deg);
+  filter: drop-shadow(0 8px 24px rgba(141, 149, 78, 0.6));
+}
+
+.intro-card-1 {
+  animation-delay: 0.2s;
+}
+
+.intro-card-2 {
+  animation-delay: 0.35s;
+}
+
+.intro-card-3 {
+  animation-delay: 0.5s;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro-card-icon {
+  font-size: clamp(4rem, 8vw, 6rem);
+  margin-bottom: 1.25rem;
+  display: block;
+  filter: drop-shadow(0 4px 16px rgba(141, 149, 78, 0.4))
+          drop-shadow(0 0 32px rgba(141, 149, 78, 0.3))
+          drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: iconPulse 3s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    filter: drop-shadow(0 4px 16px rgba(141, 149, 78, 0.4))
+            drop-shadow(0 0 32px rgba(141, 149, 78, 0.3))
+            drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 6px 20px rgba(141, 149, 78, 0.5))
+            drop-shadow(0 0 40px rgba(141, 149, 78, 0.4))
+            drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+  }
+}
+
+.intro-card-1 .intro-card-icon {
+  animation-delay: 0s;
+}
+
+.intro-card-2 .intro-card-icon {
+  animation-delay: 0.5s;
+}
+
+.intro-card-3 .intro-card-icon {
+  animation-delay: 1s;
+}
+
+.intro-card-title {
+  color: white;
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.intro-card-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Water-Energy Nexus - Mobile Friendly */
+.water-energy-nexus-section {
+  padding: clamp(2rem, 4vh, 4rem) 0;
+}
+
+.water-energy-title {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.water-energy-text {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Solar: Land vs. Water - Asymmetric Editorial Layout */
+.solar-land-water-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.solar-land-water-section .container {
+  margin: 0;
+  margin-left: 0;
+  max-width: 100%;
+}
+
+.solar-land-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+}
+
+.solar-land-layout {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 80vh;
+  padding-top: clamp(3rem, 6vh, 5rem);
+  padding-left: 350px;
+}
+
+.solar-land-content {
+  max-width: clamp(500px, 45vw, 700px);
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.solar-land-title {
+  color: white;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.solar-land-description {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: clamp(1.125rem, 1.8vw, 1.35rem);
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  text-align: left;
+  max-width: 90%;
+}
+
+.solar-land-cards {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.solar-land-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.solar-land-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(141, 149, 78, 0.4);
+  transform: translateX(8px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.35);
+}
+
+.solar-land-card-1 {
+  animation-delay: 0.2s;
+}
+
+.solar-land-card-2 {
+  animation-delay: 0.35s;
+}
+
+.solar-land-card-3 {
+  animation-delay: 0.5s;
+}
+
+.solar-land-icon {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 0.75rem;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.solar-land-card-title {
+  color: white;
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.solar-land-card-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* FPV & Water Conservation - Centered Layout */
+.fpv-conservation-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+}
+
+.fpv-conservation-centered-layout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: clamp(3rem, 6vh, 5rem) 0;
+}
+
+.fpv-conservation-header {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.fpv-conservation-title-centered {
+  color: white;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.fpv-conservation-description-centered {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: clamp(1.125rem, 1.8vw, 1.35rem);
+  line-height: 1.6;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 900px;
+}
+
+.fpv-conservation-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(2rem, 3vw, 3rem);
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.fpv-conservation-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: clamp(1.5rem, 2.5vw, 2rem) clamp(2rem, 3.5vw, 3rem);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+  text-align: center;
+}
+
+.fpv-conservation-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(141, 149, 78, 0.4);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.35);
+}
+
+.fpv-conservation-card-1 {
+  animation-delay: 0.2s;
+}
+
+.fpv-conservation-card-2 {
+  animation-delay: 0.35s;
+}
+
+.fpv-conservation-card-3 {
+  animation-delay: 0.5s;
+}
+
+.fpv-conservation-icon {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 0.5rem;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.fpv-conservation-card-title {
+  color: white;
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.fpv-conservation-card-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  line-height: 1.5;
+  margin: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
   .nav-links {
@@ -864,6 +1303,75 @@ footer a:hover {
   }
 
   .two-column-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro-floating-solar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Intro Floating - Tablet */
+  .intro-floating-layout {
+    padding-left: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .intro-floating-content {
+    max-width: 100%;
+  }
+
+  .intro-card-icon {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+  }
+
+  .intro-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.6) 60%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  }
+
+  /* Solar Land vs Water - Tablet */
+  .solar-land-layout {
+    padding-left: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .solar-land-content {
+    max-width: 100%;
+  }
+
+  .solar-land-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.6) 60%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  }
+
+  /* Water-Energy Nexus - Tablet */
+  .water-energy-title {
+    font-size: clamp(2.5rem, 7vw, 5rem) !important;
+  }
+
+  .water-energy-text {
+    font-size: clamp(1.25rem, 3vw, 1.8rem) !important;
+  }
+
+  /* FPV Conservation - Tablet */
+  .fpv-conservation-centered-layout {
+    min-height: auto;
+    justify-content: flex-start;
+    gap: 3rem;
+  }
+
+  .fpv-conservation-cards-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
@@ -898,6 +1406,160 @@ footer a:hover {
   .btn {
     padding: 0.875rem 2rem;
     font-size: 0.8rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-floating-solar-card {
+    padding: 1.5rem;
+  }
+
+  /* Intro Floating - Mobile */
+  .intro-floating-section {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+
+  .intro-floating-layout {
+    min-height: auto;
+    padding-left: 1.25rem;
+  }
+
+  .intro-floating-title {
+    font-size: 2rem;
+  }
+
+  .intro-floating-description {
+    font-size: 1.125rem;
+    max-width: 100%;
+  }
+
+  .intro-card {
+    padding: 1.5rem;
+  }
+
+  .intro-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .intro-card {
+    padding: 1.5rem 0;
+  }
+
+  .intro-card-icon {
+    font-size: 3.5rem;
+  }
+
+  .intro-card-title {
+    font-size: 1.5rem;
+  }
+
+  .intro-card-text {
+    font-size: 1rem;
+  }
+
+  /* Solar Land vs Water - Mobile */
+  .solar-land-water-section {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+
+  .solar-land-layout {
+    min-height: auto;
+    padding-left: 1.25rem;
+  }
+
+  .solar-land-title {
+    font-size: 2rem;
+  }
+
+  .solar-land-description {
+    font-size: 1.125rem;
+    max-width: 100%;
+  }
+
+  .solar-land-card {
+    padding: 1.5rem;
+  }
+
+  .solar-land-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .solar-land-icon {
+    font-size: 2.5rem;
+  }
+
+  .solar-land-card-title {
+    font-size: 1.5rem;
+  }
+
+  .solar-land-card-text {
+    font-size: 1rem;
+  }
+
+  /* Water-Energy Nexus - Mobile */
+  .water-energy-nexus-section {
+    min-height: auto !important;
+    padding: 3rem 0 !important;
+  }
+
+  .water-energy-title {
+    font-size: 2rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .water-energy-text {
+    font-size: 1.125rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* FPV Conservation - Mobile */
+  .fpv-conservation-section {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+
+  .fpv-conservation-centered-layout {
+    padding: 3rem 0;
+    gap: 2.5rem;
+    min-height: auto;
+    justify-content: flex-start;
+  }
+
+  .fpv-conservation-title-centered {
+    font-size: 2rem;
+  }
+
+  .fpv-conservation-description-centered {
+    font-size: 1.125rem;
+  }
+
+  .fpv-conservation-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .fpv-conservation-card {
+    padding: 1.5rem 1.75rem;
+  }
+
+  .fpv-conservation-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .fpv-conservation-icon {
+    font-size: 2rem;
+  }
+
+  .fpv-conservation-card-title {
+    font-size: 1.25rem;
+  }
+
+  .fpv-conservation-card-text {
+    font-size: 0.95rem;
   }
 }
 

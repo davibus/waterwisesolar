@@ -84,7 +84,7 @@ export default function GalleryPage() {
             {/* Section 1 - Exact replication of Screenshot */}
             <section style={sectionStyle}>
                 <div style={containerStyle}>
-                    <h2 style={headerStyle}>Floating solar is a proven technology (1 / 2)</h2>
+                    <h2 style={headerStyle}>Notable US Installations</h2>
 
                     <div style={gridStyle}>
                         {/* Left Column */}
@@ -186,7 +186,7 @@ export default function GalleryPage() {
             {/* Section 2 - Placeholder Duplicate */}
             <section style={sectionStyle}>
                 <div style={containerStyle}>
-                    <h2 style={headerStyle}>Floating solar is a proven technology (2 / 2)</h2>
+                    <h2 style={headerStyle}>Larger International Installations</h2>
 
                     <div style={gridStyle}>
                         {/* Left Column */}
@@ -274,73 +274,6 @@ export default function GalleryPage() {
                                     <ul style={{ ...listStyle, fontWeight: 'bold' }}>
                                         <li>Zhejiang, China, 200 MW</li>
                                         <li>Aquaculture Integration</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Section 3 - Placeholder Duplicate */}
-            <section style={{ ...sectionStyle, borderBottom: 'none' }}>
-                <div style={containerStyle}>
-                    <h2 style={headerStyle}>Future Capabilities & Scale</h2>
-
-                    <div style={gridStyle}>
-                        {/* Left Column */}
-                        <div style={leftColStyle}>
-                            <h3 style={subHeaderStyle}>Projected growth</h3>
-                            <ul style={listStyle}>
-                                <li style={{ marginBottom: '1.5rem' }}>
-                                    <strong>GW-scale potential</strong> in the American Southwest
-                                </li>
-                                <li style={{ marginBottom: '1.5rem' }}>
-                                    <strong>Hybridization</strong> with existing hydro infrastructure
-                                </li>
-                                <li style={{ marginBottom: '1.5rem' }}>
-                                    <strong>Grid resilience</strong> through distributed generation assets
-                                </li>
-                                <li>
-                                    <strong>Economic development</strong> through local green energy jobs
-                                </li>
-                            </ul>
-                        </div>
-
-                        {/* Right Column */}
-                        <div>
-                            <h3 style={subHeaderStyle}>Future Concept Concepts</h3>
-                            <div style={imageGridStyle}>
-                                {/* Image 1 */}
-                                <div>
-                                    <div style={imagePlaceholderStyle}>[Concept Image 1]</div>
-                                    <ul style={{ ...listStyle, fontWeight: 'bold' }}>
-                                        <li>Future Site A</li>
-                                        <li>Evaluation Phase</li>
-                                    </ul>
-                                </div>
-                                {/* Image 2 */}
-                                <div>
-                                    <div style={imagePlaceholderStyle}>[Concept Image 2]</div>
-                                    <ul style={{ ...listStyle, fontWeight: 'bold' }}>
-                                        <li>Future Site B</li>
-                                        <li>Planning Phase</li>
-                                    </ul>
-                                </div>
-                                {/* Image 3 */}
-                                <div>
-                                    <div style={imagePlaceholderStyle}>[Concept Image 3]</div>
-                                    <ul style={{ ...listStyle, fontWeight: 'bold' }}>
-                                        <li>Future Site C</li>
-                                        <li>Design Phase</li>
-                                    </ul>
-                                </div>
-                                {/* Image 4 */}
-                                <div>
-                                    <div style={imagePlaceholderStyle}>[Concept Image 4]</div>
-                                    <ul style={{ ...listStyle, fontWeight: 'bold' }}>
-                                        <li>Future Site D</li>
-                                        <li>Permitting Phase</li>
                                     </ul>
                                 </div>
                             </div>

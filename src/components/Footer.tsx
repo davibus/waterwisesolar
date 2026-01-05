@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="container">
                 <div className="footer-content">
                     <div className="footer-cta">
-                        <h2>Let's Get Moving</h2>
+                        <h2>Save Water. Conserve Land. Create Energy.</h2>
                         <p>
                             We seek collaboration with water boards for bathymetric data, utility application support, and public outreach.
                         </p>
@@ -15,7 +15,7 @@ export default function Footer() {
                         <h3>Contact Information</h3>
                         <p><strong>James P. Andersen</strong></p>
                         <p>Phone: <a href="tel:8016471007">(801) 647-1007</a></p>
-                        <p>Email: <a href="mailto:jamespandersen@gmail.com">jamespandersen@gmail.com</a></p>
+                        <p>Email: <a href="mailto:jim@waterwisesolar.com">jim@waterwisesolar.com</a></p>
                         <p>Website: <Link href="/">Waterwisesolar.com</Link></p>
                     </div>
                 </div>
