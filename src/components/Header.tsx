@@ -18,7 +18,6 @@ export default function Header() {
                     </Link>
                     <div className="nav-links">
                         <Link href="/technology">Learn More</Link>
-                        <Link href="/priority-sites">Priority Sites</Link>
                         <Link href="/gallery">Gallery</Link>
                         <Link href="/about">About Us</Link>
                     </div>

@@ -51,25 +51,10 @@ export default function LearnMore() {
   return (
     <div>
       {/* Political & Regulatory Section */}
-      <section className="section section-light section-with-video" style={{
-        backgroundImage: 'url(/images/AdobeStock_1500691155_Preview.jpeg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        position: 'relative'
-      }}>
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          zIndex: 0
-        }}></div>
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <h2 style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)', color: 'white' }}>Political, Social, Economic, and Regulatory Considerations</h2>
-          <p className="overview-intro" style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem', color: 'white' }}>
+      <section className="section section-light">
+        <div className="container">
+          <h2 style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)', color: 'black' }}>Political, Social, Economic, and Regulatory Considerations</h2>
+          <p className="overview-intro" style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem', color: 'black' }}>
             Successful FPV deployment requires navigating complex political landscapes while balancing stakeholder interests and building community support.
           </p>
           <div className="values-grid">
@@ -103,9 +88,6 @@ export default function LearnMore() {
               <h3>Adaptive Regulatory Framework</h3>
               <p>Phased development allows communities to validate technical and political viability of each site before full build-out, building local confidence.</p>
             </div>
-          </div>
-          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <Link href="/f/political-social-economic-and-regulatory-considerations" className="btn btn-secondary">Learn More</Link>
           </div>
         </div>
       </section>
@@ -152,9 +134,6 @@ export default function LearnMore() {
               <p>U.S. can leverage international lessons while adapting to unique Western water challenges, recreational demand, and grid infrastructure constraints.</p>
             </div>
           </div>
-          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <Link href="/f/notable-international-fpv-arrays-with-local-application" className="btn btn-secondary">Learn More</Link>
-          </div>
         </div>
       </section>
 
@@ -199,9 +178,6 @@ export default function LearnMore() {
               <h3>Community Engagement Essential</h3>
               <p>Stakeholder input balances community recreation priorities with energy production goals requiring transparent communication and adaptive design.</p>
             </div>
-          </div>
-          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <Link href="/f/environmental-recreational-and-permitting-factors" className="btn btn-secondary">Learn More</Link>
           </div>
         </div>
       </section>
