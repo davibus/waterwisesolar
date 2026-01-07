@@ -21,7 +21,7 @@ export default function Home() {
 
       {/* Introduction Section */}
       <section className="section section-warm water-energy-nexus-section" style={{
-        backgroundImage: 'url(/images/AdobeStock_1615928997_Preview.jpeg)',
+        backgroundImage: 'url(/images/water-energy-nexus-optimized.jpeg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
