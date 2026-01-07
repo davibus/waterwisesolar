@@ -963,7 +963,7 @@ footer a:hover {
 .intro-floating-cards {
   display: flex;
   flex-direction: column;
-  gap: clamp(1.25rem, 2.5vw, 2rem);
+  gap: clamp(0.75rem, 1.5vw, 1.25rem);
 }
 
 .intro-card {
@@ -1018,7 +1018,7 @@ footer a:hover {
 }
 
 .intro-card-icon {
-  font-size: clamp(4rem, 8vw, 6rem);
+  font-size: clamp(2.4rem, 4.8vw, 3.6rem);
   margin-bottom: 1.25rem;
   display: block;
   filter: drop-shadow(0 4px 16px rgba(141, 149, 78, 0.4))
@@ -1354,7 +1354,7 @@ footer a:hover {
   }
 
   .intro-card-icon {
-    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-size: clamp(1.8rem, 3.6vw, 2.7rem);
   }
 
   .intro-overlay {
@@ -1478,7 +1478,7 @@ footer a:hover {
   }
 
   .intro-card-icon {
-    font-size: 3.5rem;
+    font-size: 2.1rem;
   }
 
   .intro-card-title {
