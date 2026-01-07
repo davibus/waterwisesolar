@@ -12,6 +12,7 @@ export default function Home() {
       <section className="hero-main">
         <HeroVideo />
         <div className="hero-content-overlay">
+          <h2 className="hero-title">Floating Solar</h2>
           <h1>Innovating in the Colorado River Basin to save water, land, and accelerate clean, peak matching, energy generation.</h1>
         </div>
       </section>
