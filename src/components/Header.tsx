@@ -1,7 +1,20 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function Header() {
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+    const toggleMobileMenu = () => {
+        setMobileMenuOpen(!mobileMenuOpen);
+    };
+
+    const closeMobileMenu = () => {
+        setMobileMenuOpen(false);
+    };
+
     return (
         <header>
             <div className="container">
@@ -16,10 +29,20 @@ export default function Header() {
                         />
                         <span>Water Wise Solar Solutions</span>
                     </Link>
-                    <div className="nav-links">
-                        <Link href="/technology">Learn More</Link>
-                        <Link href="/gallery">Gallery</Link>
-                        <Link href="/about">About Us</Link>
+
+                    <button
+                        className="mobile-menu-toggle"
+                        onClick={toggleMobileMenu}
+                        aria-label="Toggle navigation menu"
+                        aria-expanded={mobileMenuOpen}
+                    >
+                        <span className={`hamburger ${mobileMenuOpen ? 'open' : ''}`}></span>
+                    </button>
+
+                    <div className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+                        <Link href="/technology" onClick={closeMobileMenu}>Learn More</Link>
+                        <Link href="/gallery" onClick={closeMobileMenu}>Gallery</Link>
+                        <Link href="/about" onClick={closeMobileMenu}>About Us</Link>
                     </div>
                 </nav>
             </div>
