@@ -42,11 +42,11 @@ export default function Home() {
         }}></div>
         <div className="container" style={{ position: 'relative', zIndex: 1, maxWidth: '2100px', padding: '0 clamp(1.5rem, 4vw, 3rem)' }}>
           <div style={{ width: '100%', margin: '0', textAlign: 'left' }}>
-            <h2 className="water-energy-title" style={{ color: 'white', textAlign: 'left', fontSize: 'clamp(1.5rem, 5.46vw, 4.29rem)' }}>The Water-Energy Nexus</h2>
-            <p className="overview-intro water-energy-text" style={{ color: 'white', textAlign: 'left', fontSize: 'clamp(0.675rem, 2.34vw, 1.368rem)', maxWidth: 'none', margin: '0 0 1.5rem 0' }}>
+            <h2 className="water-energy-title" style={{ color: 'white', textAlign: 'left', fontSize: 'clamp(1.125rem, 4.1vw, 3.22rem)' }}>The Water-Energy Nexus</h2>
+            <p className="overview-intro water-energy-text" style={{ color: 'white', textAlign: 'left', fontSize: 'clamp(0.5rem, 1.75vw, 1rem)', maxWidth: 'none', margin: '0 0 1.5rem 0' }}>
               The Colorado River, a vital water source for the American West, is in crisis. Ongoing drought, chronic overuse, and climate pressures have triggered historic water shortages, prompting mandatory cutbacks and urgent calls to rebalance the region's water withdrawals with its dwindling supply.
             </p>
-            <p className="overview-intro water-energy-text" style={{ color: 'white', textAlign: 'left', fontSize: 'clamp(0.675rem, 2.34vw, 1.368rem)', maxWidth: 'none', margin: '0' }}>
+            <p className="overview-intro water-energy-text" style={{ color: 'white', textAlign: 'left', fontSize: 'clamp(0.5rem, 1.75vw, 1rem)', maxWidth: 'none', margin: '0' }}>
               Floating solar photovoltaic (FPV) systems have been in wide use at large scale in Southeast Asia as a way to double use scarce land. Water Wise SS offers a complementary solution that mitigates evaporative losses from reservoirs while generating clean electricity—without requiring major changes to consumer behavior or infrastructure expansion. Utah, Arizona, New Mexico and Southern California with their abundant solar resources, increasing energy demand, constant drought conditions, reliance on the Colorado River and numerous man-made reservoirs, are ideal locations for deployment of this technology.
             </p>
           </div>
