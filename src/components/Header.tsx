@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
     return (
@@ -6,7 +7,14 @@ export default function Header() {
             <div className="container">
                 <nav>
                     <Link href="/" className="logo">
-                        Water Wise Solar Solutions
+                        <Image
+                            src="/images/header-logo.jpg"
+                            alt="Water Wise Solar Solutions"
+                            width={50}
+                            height={50}
+                            className="header-logo-image"
+                        />
+                        <span>Water Wise Solar Solutions</span>
                     </Link>
                     <div className="nav-links">
                         <Link href="/technology">Learn More</Link>
