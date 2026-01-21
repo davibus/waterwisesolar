@@ -86,7 +86,7 @@ export default function AboutPage() {
                                 <ul style={{ listStyle: 'disc', paddingLeft: '1.2rem', margin: 0, fontSize: '0.95rem', lineHeight: '1.5', textAlign: 'left' }}>
                                     <li style={{ marginBottom: '0.5rem' }}>Extensive energy project development experience and relationships</li>
                                     <li style={{ marginBottom: '0.5rem' }}>Special expertise in complex EPC / delivery</li>
-                                    <li>Univ. Portland (MBA, Energy/ Environment focus); Arizona State University (B.Sc. Business)</li>
+                                    <li>Univ. Portland (MBA, Energy/ Environment focus); Arizona State University (B.S. Supply Chain Management)</li>
                                 </ul>
                             </div>
                         </div>

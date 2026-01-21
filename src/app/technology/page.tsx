@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { getAllPages } from '@/lib/data';
 
 function extractDate(markdown: string): string | null {
@@ -50,6 +51,49 @@ export default function LearnMore() {
 
   return (
     <div>
+      {/* Hero Section */}
+      <section className="section section-light" style={{ paddingTop: '4rem', paddingBottom: '4rem' }}>
+        <div className="container">
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '3rem',
+            alignItems: 'center',
+            maxWidth: '1200px',
+            margin: '0 auto'
+          }}>
+            {/* Left Column - Image */}
+            <div style={{ position: 'relative', width: '100%', aspectRatio: '4/3' }}>
+              <Image
+                src="/images/jim-anderson-learn-more.jpg"
+                alt="Learn More Hero"
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+
+            {/* Right Column - Text */}
+            <div style={{ padding: '2rem' }}>
+              <h1 style={{
+                fontSize: 'clamp(1.1rem, 2.5vw, 1.8rem)',
+                marginBottom: '1.5rem',
+                fontFamily: 'DM Sans, sans-serif',
+                fontWeight: 'normal',
+                fontStyle: 'italic',
+                color: '#1a1a1a',
+                lineHeight: '1.3',
+                textAlign: 'left'
+              }}>
+                Floating Solar in the West<br />
+                Conserving water<br />
+                Conserving land<br />
+                Accelerating Energy Generation
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Political & Regulatory Section */}
       <section className="section section-light">
         <div className="container">

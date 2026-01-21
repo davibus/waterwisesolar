@@ -12,8 +12,8 @@ export default function Home() {
       <section className="hero-main">
         <HeroVideo />
         <div className="hero-content-overlay">
-          <h2 className="hero-title">Floating Solar</h2>
-          <h1>Innovating in the Colorado River Basin to save water, land, and accelerate clean, peak matching, energy generation.</h1>
+          <h2 className="hero-title">Floating Solar in the West</h2>
+          <h1>Conserving water, conserving land, accelerating energy generation.</h1>
         </div>
       </section>
 
@@ -77,20 +77,20 @@ export default function Home() {
               <h2 className="intro-floating-title" style={{ whiteSpace: 'nowrap' }}>Introduction to Floating Solar</h2>
 
               <div className="intro-floating-cards">
-                <div className="intro-card intro-card-1">
+                <Link href="/f/fpv-water-conservation" className="intro-card intro-card-1" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
                   <div className="intro-card-icon">💧</div>
                   <h3 className="intro-card-title">Save Water</h3>
-                </div>
+                </Link>
 
-                <div className="intro-card intro-card-2">
+                <Link href="/f/solar-land-vs-water" className="intro-card intro-card-2" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
                   <div className="intro-card-icon">🏞️</div>
                   <h3 className="intro-card-title">Conserve Land</h3>
-                </div>
+                </Link>
 
-                <div className="intro-card intro-card-3">
+                <Link href="/f/introduction" className="intro-card intro-card-3" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
                   <div className="intro-card-icon">⚡</div>
                   <h3 className="intro-card-title">Create Energy</h3>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -123,23 +123,23 @@ export default function Home() {
               </p>
 
               <div className="solar-land-cards">
-                <div className="solar-land-card solar-land-card-1">
+                <Link href="/f/solar-land-vs-water" className="solar-land-card solar-land-card-1" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
                   <div className="solar-land-icon">🏞️</div>
                   <h3 className="solar-land-card-title">Efficient Land Use & Infrastructure</h3>
                   <p className="solar-land-card-text">Dual-use of existing water bodies without consuming agricultural land or natural habitats. Existing infrastructure and access significantly reduce development costs.</p>
-                </div>
+                </Link>
 
-                <div className="solar-land-card solar-land-card-2">
+                <Link href="/f/fpv-size-and-business-case" className="solar-land-card solar-land-card-2" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
                   <div className="solar-land-icon">⚡</div>
                   <h3 className="solar-land-card-title">Improved Performance & Optimized Yield</h3>
                   <p className="solar-land-card-text">Water cooling enhances panel efficiency by 6-12% over land-based systems. Uniform exposure with minimal obstructions optimizes energy yield.</p>
-                </div>
+                </Link>
 
-                <div className="solar-land-card solar-land-card-3">
+                <Link href="/f/environmental-recreational-and-permitting-factors" className="solar-land-card solar-land-card-3" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
                   <div className="solar-land-icon">💧</div>
                   <h3 className="solar-land-card-title">Water Conservation & Environmental Protection</h3>
                   <p className="solar-land-card-text">Saves approximately 4.6 acre-feet of water annually per acre through evaporation reduction. No land clearing, grading, or soil compaction required.</p>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -166,23 +166,23 @@ export default function Home() {
             </div>
 
             <div className="fpv-conservation-cards-grid">
-              <div className="fpv-conservation-card fpv-conservation-card-1">
+              <Link href="/f/fpv-water-conservation" className="fpv-conservation-card fpv-conservation-card-1" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
                 <div className="fpv-conservation-icon">💧</div>
                 <h3 className="fpv-conservation-card-title">Basin-Wide Evaporation Crisis</h3>
                 <p className="fpv-conservation-card-text">Evaporation is 30% of total Colorado River Basin water use.</p>
-              </div>
+              </Link>
 
-              <div className="fpv-conservation-card fpv-conservation-card-2">
+              <Link href="/f/environmental-recreational-and-permitting-factors" className="fpv-conservation-card fpv-conservation-card-2" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
                 <div className="fpv-conservation-icon">📈</div>
                 <h3 className="fpv-conservation-card-title">Quantified Multi-Benefit Protection</h3>
                 <p className="fpv-conservation-card-text">FPV improves water quality, reduces temperature, wind/erosion and preserves the health of the reservoir.</p>
-              </div>
+              </Link>
 
-              <div className="fpv-conservation-card fpv-conservation-card-3">
+              <Link href="/f/electricity-pricing-ppa%E2%80%99s-and-government-programs" className="fpv-conservation-card fpv-conservation-card-3" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
                 <div className="fpv-conservation-icon">🔬</div>
                 <h3 className="fpv-conservation-card-title">Scientific & Complementary Strategy</h3>
                 <p className="fpv-conservation-card-text">FPV offers a cost-effective, long term compliment to water buyback programs ($360/acre-ft annually) or other, more expensive alternatives.</p>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
