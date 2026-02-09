@@ -100,7 +100,7 @@ export default function Home() {
       {/* Spacer */}
       <div style={{ height: '75px', backgroundColor: '#8d954e' }}></div>
 
-      {/* Solar: Land vs. Water Section */}
+      {/* Advantages of Floating Solar Section */}
       <section className="section section-light section-with-background-image solar-land-water-section">
         <Image
           src="/images/solar-land-vs-water.jpeg"
@@ -117,30 +117,27 @@ export default function Home() {
         <div className="container section-content-overlay" style={{ maxWidth: '100%', padding: '0 clamp(1.5rem, 4vw, 3rem)' }}>
           <div className="solar-land-layout">
             <div className="solar-land-content">
-              <h2 className="solar-land-title">Solar: Land vs. Water</h2>
+              <h2 className="solar-land-title">Advantages of Floating Solar</h2>
               <p className="solar-land-description">
                 Floating solar systems (FPV) offer several advantages over traditional ground-mounted photovoltaic (PV) installations, particularly in arid regions where land is scarce and water evaporation rates are high.
               </p>
+            </div>
 
-              <div className="solar-land-cards">
-                <Link href="/f/solar-land-vs-water" className="solar-land-card solar-land-card-1" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
-                  <div className="solar-land-icon">🏞️</div>
-                  <h3 className="solar-land-card-title">Efficient Land Use & Infrastructure</h3>
-                  <p className="solar-land-card-text">Dual-use of existing water bodies without consuming agricultural land or natural habitats. Existing infrastructure and access significantly reduce development costs.</p>
-                </Link>
+            <div className="solar-land-cards">
+              <Link href="/f/solar-land-vs-water" className="solar-land-card solar-land-card-1" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
+                <h3 className="solar-land-card-title">Efficient Land Use & Infrastructure</h3>
+                <p className="solar-land-card-text">Dual-use of existing water bodies without consuming agricultural land or natural habitats. Existing infrastructure and access significantly reduce development costs.</p>
+              </Link>
 
-                <Link href="/f/fpv-size-and-business-case" className="solar-land-card solar-land-card-2" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
-                  <div className="solar-land-icon">⚡</div>
-                  <h3 className="solar-land-card-title">Improved Performance & Optimized Yield</h3>
-                  <p className="solar-land-card-text">Water cooling enhances panel efficiency by 6-12% over land-based systems. Uniform exposure with minimal obstructions optimizes energy yield.</p>
-                </Link>
+              <Link href="/f/fpv-size-and-business-case" className="solar-land-card solar-land-card-2" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
+                <h3 className="solar-land-card-title">Improved Performance & Optimized Yield</h3>
+                <p className="solar-land-card-text">Water cooling enhances panel efficiency by 6-12% over land-based systems. Uniform exposure with minimal obstructions optimizes energy yield.</p>
+              </Link>
 
-                <Link href="/f/environmental-recreational-and-permitting-factors" className="solar-land-card solar-land-card-3" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
-                  <div className="solar-land-icon">💧</div>
-                  <h3 className="solar-land-card-title">Water Conservation & Environmental Protection</h3>
-                  <p className="solar-land-card-text">Saves approximately 4.6 acre-feet of water annually per acre through evaporation reduction. No land clearing, grading, or soil compaction required.</p>
-                </Link>
-              </div>
+              <Link href="/f/environmental-recreational-and-permitting-factors" className="solar-land-card solar-land-card-3" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
+                <h3 className="solar-land-card-title">Water Conservation & Environmental Protection</h3>
+                <p className="solar-land-card-text">Saves approximately 4.6 acre-feet of water annually per acre through evaporation reduction. No land clearing, grading, or soil compaction required.</p>
+              </Link>
             </div>
           </div>
         </div>

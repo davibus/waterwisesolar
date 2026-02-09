@@ -17,21 +17,13 @@ export default function Footer() {
                     </div>
                     <div className="footer-cta">
                         <h2>Save Water. Conserve Land. Create Energy.</h2>
-                        <p>
-                            We seek collaboration with water boards for bathymetric data, utility application support, and public outreach.
-                        </p>
                     </div>
                     <div className="footer-contact">
-                        <h3>Contact Information</h3>
-                        <p><strong>James P. Andersen</strong></p>
-                        <p>Phone: <a href="tel:8016471007">(801) 647-1007</a></p>
-                        <p>Email: <a href="mailto:jim@waterwisesolar.com">jim@waterwisesolar.com</a></p>
-                        <p>Website: <Link href="/">Waterwisesolar.com</Link></p>
+                        <Link href="/contact" style={{ fontSize: '1.25rem', color: 'inherit', textDecoration: 'underline' }}>Contact</Link>
                     </div>
                 </div>
                 <div className="footer-bottom">
                     <p>&copy; {new Date().getFullYear()} Water Wise Solar Solutions - All Rights Reserved.</p>
-                    <p className="footer-note">Based on research from NREL, Pacificorp OATT, and Utah FPV Feasibility Studies.</p>
                 </div>
             </div>
         </footer>

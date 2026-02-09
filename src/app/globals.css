@@ -1098,6 +1098,13 @@ footer a:hover {
   }
 }
 
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -1173,7 +1180,7 @@ footer a:hover {
   overflow-wrap: break-word;
 }
 
-/* Solar: Land vs. Water - Asymmetric Editorial Layout */
+/* Advantages of Floating Solar - Asymmetric Editorial Layout */
 .solar-land-water-section {
   min-height: 100vh;
   display: flex;
@@ -1198,19 +1205,20 @@ footer a:hover {
 .solar-land-layout {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 80vh;
   padding-top: clamp(3rem, 6vh, 5rem);
-  padding-left: 150px;
+  padding-bottom: clamp(2rem, 4vh, 3rem);
 }
 
 .solar-land-content {
-  max-width: clamp(500px, 45vw, 700px);
-  margin-left: 0;
+  max-width: clamp(500px, 60vw, 800px);
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.5rem);
 }
 
 .solar-land-title {
@@ -1220,7 +1228,7 @@ footer a:hover {
   line-height: 1.1;
   margin: 0 0 0.5rem 0;
   letter-spacing: -0.02em;
-  text-align: left;
+  text-align: center;
 }
 
 .solar-land-description {
@@ -1228,33 +1236,37 @@ footer a:hover {
   font-size: clamp(0.95rem, 1.5vw, 1.15rem);
   line-height: 1.6;
   margin: 0 0 1rem 0;
-  text-align: left;
+  text-align: center;
   max-width: 90%;
 }
 
 .solar-land-cards {
   display: flex;
-  flex-direction: column;
-  gap: clamp(1.25rem, 2.5vw, 2rem);
+  flex-direction: row;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  width: 100%;
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
+  margin-top: auto;
 }
 
 .solar-land-card {
+  flex: 1;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
-  padding: clamp(1.75rem, 3vw, 2.5rem);
+  padding: clamp(1.5rem, 2.5vw, 2rem);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   opacity: 0;
-  transform: translateX(-30px);
-  animation: slideInLeft 0.6s ease-out forwards;
+  transform: translateY(20px);
+  animation: slideInUp 0.6s ease-out forwards;
 }
 
 .solar-land-card:hover {
   background: rgba(255, 255, 255, 0.12);
   border-color: rgba(141, 149, 78, 0.4);
-  transform: translateX(8px);
+  transform: translateY(-8px);
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.35);
 }
 
@@ -1268,13 +1280,6 @@ footer a:hover {
 
 .solar-land-card-3 {
   animation-delay: 0.5s;
-}
-
-.solar-land-icon {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  margin-bottom: 0.75rem;
-  display: block;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
 }
 
 .solar-land-card-title {
@@ -1637,7 +1642,11 @@ footer a:hover {
 
   .solar-land-layout {
     min-height: auto;
-    padding-left: 1.25rem;
+    padding: 2rem 0;
+  }
+
+  .solar-land-content {
+    margin: 0 1.25rem;
   }
 
   .solar-land-title {
@@ -1649,16 +1658,18 @@ footer a:hover {
     max-width: 100%;
   }
 
+  .solar-land-cards {
+    flex-direction: column;
+    padding: 0 1.25rem;
+    margin-top: 1.5rem;
+  }
+
   .solar-land-card {
     padding: 1.5rem;
   }
 
   .solar-land-card:hover {
     transform: translateY(-4px);
-  }
-
-  .solar-land-icon {
-    font-size: 2.5rem;
   }
 
   .solar-land-card-title {
