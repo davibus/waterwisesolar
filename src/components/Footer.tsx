@@ -19,7 +19,7 @@ export default function Footer() {
                         <h2>Save Water. Conserve Land. Create Energy.</h2>
                     </div>
                     <div className="footer-contact">
-                        <Link href="/contact" style={{ fontSize: '1.25rem', color: 'inherit', textDecoration: 'underline' }}>Contact</Link>
+                        <Link href="/about" style={{ fontSize: '1.25rem', color: 'inherit', textDecoration: 'underline' }}>Contact</Link>
                     </div>
                 </div>
                 <div className="footer-bottom">
