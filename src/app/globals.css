@@ -55,7 +55,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: inherit;
   color: var(--text-dark);
   margin-top: 0;
   margin-bottom: 1rem;
@@ -97,7 +97,7 @@ nav {
 }
 
 .logo {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: inherit;
   font-weight: 700;
   font-size: 1.25rem;
   color: var(--text-dark);
@@ -288,7 +288,7 @@ nav {
 .btn {
   display: inline-block;
   padding: 1rem 2.5rem;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: inherit;
   font-weight: 500;
   font-size: 0.875rem;
   text-align: center;
@@ -520,7 +520,7 @@ footer a:hover {
 }
 
 .footer-cta h2 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: inherit;
   color: var(--text-light);
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   margin-bottom: 1.5rem;
@@ -534,7 +534,7 @@ footer a:hover {
 }
 
 .footer-contact h3 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: inherit;
   color: var(--text-light);
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
@@ -684,7 +684,7 @@ footer a:hover {
 }
 
 .hero-main p {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: inherit;
   font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   font-weight: 500;
   margin-bottom: 3rem;
@@ -708,7 +708,7 @@ footer a:hover {
   font-size: clamp(0.75rem, 2vw, 0.875rem);
   border-radius: 4px;
   white-space: nowrap;
-  font-family: 'DM Sans', sans-serif;
+  font-family: inherit;
   text-align: center;
   z-index: 1;
 }
@@ -759,7 +759,7 @@ footer a:hover {
   font-size: clamp(2rem, 5vw, 3.5rem);
   color: var(--text-dark);
   margin-bottom: 2rem;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: inherit;
 }
 
 .overview-intro {
@@ -980,7 +980,7 @@ footer a:hover {
   width: 100%;
 }
 
-/* Introduction to Floating Solar - Custom styling */
+/* The Floating Solar Opportunity - Custom styling */
 .intro-floating-solar-grid {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -989,7 +989,7 @@ footer a:hover {
   padding: clamp(2rem, 5vw, 4.5rem);
 }
 
-/* Introduction to Floating Solar - Asymmetric Editorial Layout */
+/* The Floating Solar Opportunity - Asymmetric Editorial Layout */
 .intro-floating-section {
   min-height: 100vh;
   display: flex;
@@ -997,9 +997,10 @@ footer a:hover {
 }
 
 .intro-floating-section .container {
-  margin: 0;
-  margin-left: 0;
+  margin: 0 auto;
   max-width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .intro-overlay {
@@ -1014,19 +1015,21 @@ footer a:hover {
 .intro-floating-layout {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   min-height: 80vh;
   padding-top: clamp(3rem, 6vh, 5rem);
-  padding-left: 50px;
+  padding-bottom: clamp(2rem, 4vh, 3rem);
 }
 
 .intro-floating-content {
-  max-width: clamp(500px, 45vw, 700px);
-  margin-left: 0;
+  max-width: clamp(500px, 60vw, 800px);
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.5rem);
 }
 
 .intro-floating-title {
@@ -1034,9 +1037,9 @@ footer a:hover {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
   line-height: 1.1;
-  margin: 0 0 0.5rem 0;
+  margin: 0;
   letter-spacing: -0.02em;
-  text-align: left;
+  text-align: center;
 }
 
 .intro-floating-description {
@@ -1044,14 +1047,19 @@ footer a:hover {
   font-size: clamp(1.125rem, 1.8vw, 1.35rem);
   line-height: 1.6;
   margin: 0 0 1rem 0;
-  text-align: left;
+  text-align: center;
   max-width: 90%;
 }
 
 .intro-floating-cards {
   display: flex;
-  flex-direction: column;
-  gap: clamp(0.75rem, 1.5vw, 1.25rem);
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  width: 100%;
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
+  margin-top: auto;
 }
 
 .intro-card {
@@ -1059,18 +1067,22 @@ footer a:hover {
   backdrop-filter: none;
   border: none;
   border-radius: 0;
-  padding: clamp(1.75rem, 3vw, 2.5rem) 0;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: none;
   opacity: 0;
-  transform: translateX(-30px);
-  animation: slideInLeft 0.6s ease-out forwards;
+  transform: translateY(20px);
+  animation: slideInUp 0.6s ease-out forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .intro-card:hover {
   background: transparent;
   border-color: transparent;
-  transform: translateX(8px);
+  transform: translateY(-8px);
   box-shadow: none;
 }
 
@@ -1298,7 +1310,7 @@ footer a:hover {
   margin: 0;
 }
 
-/* FPV & Water Conservation - Centered Layout */
+/* Improving the Water Economy - Centered Layout */
 .fpv-conservation-section {
   min-height: 100vh;
   display: flex;
@@ -1598,7 +1610,11 @@ footer a:hover {
 
   .intro-floating-layout {
     min-height: auto;
-    padding-left: 1.25rem;
+    padding: 2rem 0;
+  }
+
+  .intro-floating-content {
+    margin: 0 1.25rem;
   }
 
   .intro-floating-title {
@@ -1610,8 +1626,14 @@ footer a:hover {
     max-width: 100%;
   }
 
+  .intro-floating-cards {
+    flex-direction: column;
+    padding: 0 1.25rem;
+    margin-top: 1.5rem;
+  }
+
   .intro-card {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .intro-card:hover {

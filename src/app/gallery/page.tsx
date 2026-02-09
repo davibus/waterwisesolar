@@ -86,30 +86,7 @@ export default function GalleryPage() {
                 <div style={containerStyle}>
                     <h2 style={headerStyle}>Notable US Installations</h2>
 
-                    <div style={gridStyle}>
-                        {/* Left Column */}
-                        <div style={leftColStyle}>
-                            <h3 style={subHeaderStyle}>Key characteristics</h3>
-                            <ul style={listStyle}>
-                                <li style={{ marginBottom: '1.5rem' }}>
-                                    <strong>Uses standard solar panels</strong> and infrastructure
-                                </li>
-                                <li style={{ marginBottom: '1.5rem' }}>
-                                    <strong>Runs more efficiently</strong> than land-based due to temperature buffering effects
-                                </li>
-                                <li style={{ marginBottom: '1.5rem' }}>
-                                    <strong>No land ownership / leasing costs</strong> (land constraints often a key driver in SE Asia)
-                                </li>
-                                <li style={{ marginBottom: '1.5rem' }}>
-                                    <strong>Provides higher energy density</strong> (1.75-2.25 acres/MW FPV vs. 5-10 acres/MW land-based)
-                                </li>
-                                <li>
-                                    <strong>Often integrated with baseload</strong> generation (e.g. hydro, natural gas, coal)
-                                </li>
-                            </ul>
-                        </div>
-
-                        {/* Right Column */}
+                    <div>
                         <div>
                             <h3 style={subHeaderStyle}>Examples (US)</h3>
                             <div style={imageGridStyle}>
@@ -188,27 +165,7 @@ export default function GalleryPage() {
                 <div style={containerStyle}>
                     <h2 style={headerStyle}>Larger International Installations</h2>
 
-                    <div style={gridStyle}>
-                        {/* Left Column */}
-                        <div style={leftColStyle}>
-                            <h3 style={subHeaderStyle}>Additional characteristics</h3>
-                            <ul style={listStyle}>
-                                <li style={{ marginBottom: '1.5rem' }}>
-                                    <strong>Reduced evaporation</strong> saves critical water resources in arid regions
-                                </li>
-                                <li style={{ marginBottom: '1.5rem' }}>
-                                    <strong>Algae growth mitigation</strong> improves water quality and lowers treatment costs
-                                </li>
-                                <li style={{ marginBottom: '1.5rem' }}>
-                                    <strong>Scalable design</strong> allows for phased implementation and expansion
-                                </li>
-                                <li>
-                                    <strong>Quick deployment</strong> relative to complex land-based civil engineering projects
-                                </li>
-                            </ul>
-                        </div>
-
-                        {/* Right Column */}
+                    <div>
                         <div>
                             <h3 style={subHeaderStyle}>Additional Examples</h3>
                             <div style={imageGridStyle}>
