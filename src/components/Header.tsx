@@ -40,7 +40,7 @@ export default function Header() {
                     </button>
 
                     <div className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
-                        <Link href="/technology" onClick={closeMobileMenu}>Learn More</Link>
+                        <Link href="/technology" onClick={closeMobileMenu}>Articles & Insights</Link>
                         <Link href="/gallery" onClick={closeMobileMenu}>Gallery</Link>
                         <Link href="/about" onClick={closeMobileMenu}>About Us</Link>
                     </div>

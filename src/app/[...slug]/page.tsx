@@ -33,6 +33,19 @@ export default async function Page({ params }: { params: Promise<{ slug: string[
         notFound();
     }
 
+    // Remove everything before and including "All Posts" if it exists
+    let markdown = page.markdown;
+    const allPostIndex = markdown.indexOf('All Posts');
+    if (allPostIndex !== -1) {
+        markdown = markdown.substring(allPostIndex + 'All Posts'.length).trimStart();
+    }
+
+    // Remove footer content starting from "Powered by"
+    const poweredByIndex = markdown.indexOf('Powered by');
+    if (poweredByIndex !== -1) {
+        markdown = markdown.substring(0, poweredByIndex).trimEnd();
+    }
+
     return (
         <div>
             <section style={{ padding: '3rem 0', background: '#f1f5f9', borderBottom: '1px solid #e2e8f0' }}>
@@ -49,7 +62,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string[
             <div className="container" style={{ padding: '4rem 0' }}>
                 <div style={{ background: '#fff', padding: '2rem', borderRadius: '8px', border: '1px solid #f1f5f9' }}>
                     <article className="article-content" style={{ maxWidth: '800px', margin: '0 auto' }}>
-                        <ReactMarkdown>{page.markdown}</ReactMarkdown>
+                        <ReactMarkdown>{markdown}</ReactMarkdown>
                     </article>
                 </div>
             </div>

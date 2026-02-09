@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function AboutPage() {
     return (
@@ -18,111 +17,44 @@ export default function AboutPage() {
                     About Us
                 </h1>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'start' }}>
-
-                    {/* Left Column: Current Status */}
-                    <div style={{
-                        backgroundColor: '#e3e8c1', // Approximate light green from screenshot
-                        padding: '2.5rem',
-                        borderRadius: '0',
-                        height: '100%',
-                        textAlign: 'left'
-                    }}>
-                        <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem', fontWeight: '700', fontFamily: 'DM Sans, sans-serif', textAlign: 'left' }}>Current status</h2>
-
-                        <ul style={{ listStyle: 'none', padding: 0, margin: 0, textAlign: 'left' }}>
-                            <li style={{ marginBottom: '2rem', display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                                <span style={{ fontSize: '1.5rem', lineHeight: '1', marginTop: '-0.2rem' }}>•</span>
-                                <span style={{ fontSize: '1.1rem', lineHeight: '1.4' }}>
-                                    Active relationships with floating solar <strong>technology providers, academic researchers, and financial partners</strong>
-                                </span>
-                            </li>
-                            <li style={{ marginBottom: '2rem', display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                                <span style={{ fontSize: '1.5rem', lineHeight: '1', marginTop: '-0.2rem' }}>•</span>
-                                <span style={{ fontSize: '1.1rem', lineHeight: '1.4' }}>
-                                    Active discussions with <strong>pilot-scale projects and stakeholders in Utah</strong>, including those that could launch before investment tax credits expire
-                                </span>
-                            </li>
-                            <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                                <span style={{ fontSize: '1.5rem', lineHeight: '1', marginTop: '-0.2rem' }}>•</span>
-                                <span style={{ fontSize: '1.1rem', lineHeight: '1.4' }}>
-                                    Currently expanding <strong>relationships with energy, water, and economic development policy makers</strong> (executive and legislative branches)
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Right Column: Team */}
-                    <div style={{ paddingLeft: '2rem', borderLeft: '1px solid #ccc', textAlign: 'left' }}>
+                <div>
+                    {/* Team */}
+                    <div style={{ textAlign: 'left' }}>
                         <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem', fontWeight: '700', fontFamily: 'DM Sans, sans-serif', textAlign: 'left' }}>Team</h2>
 
                         {/* Team Member 1: Jim */}
-                        <div style={{ display: 'flex', gap: '2rem', marginBottom: '3rem' }}>
-                            {/* Image */}
-                            <div style={{
-                                width: '180px',
-                                height: '180px',
-                                flexShrink: 0,
-                                position: 'relative',
-                                overflow: 'hidden'
-                            }}>
-                                <Image
-                                    src="/images/jimmy-anderson.png"
-                                    alt="Jim Anderson"
-                                    width={180}
-                                    height={180}
-                                    style={{ objectFit: 'cover' }}
-                                />
-                            </div>
-
+                        <div style={{ marginBottom: '3rem' }}>
                             <div>
-                                <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', fontWeight: 'normal', fontFamily: 'DM Sans, sans-serif', textAlign: 'left' }}>
+                                <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', fontWeight: 'normal', fontFamily: 'DM Sans, sans-serif', textAlign: 'left', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                                     <strong>Jim Anderson</strong>
                                     <a href="mailto:jim@waterwisesolar.com" style={{ color: 'inherit', textDecoration: 'none', fontStyle: 'italic', opacity: 0.8 }}> (jim@waterwisesolar.com)</a>
+                                    <a href="https://www.linkedin.com/in/jamespwaterwise/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', marginLeft: '0.25rem' }}>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#0A66C2">
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                        </svg>
+                                    </a>
                                 </h3>
                                 <p style={{ fontStyle: 'italic', marginBottom: '1rem', fontSize: '1rem', textAlign: 'left' }}>
                                     Founder and Chief Developer - Water Wise Solar Solutions
                                 </p>
-                                <ul style={{ listStyle: 'disc', paddingLeft: '1.2rem', margin: 0, fontSize: '0.95rem', lineHeight: '1.5', textAlign: 'left' }}>
-                                    <li style={{ marginBottom: '0.5rem' }}>Extensive energy project development experience and relationships</li>
-                                    <li style={{ marginBottom: '0.5rem' }}>Special expertise in complex EPC / delivery</li>
-                                    <li>Univ. Portland (MBA, Energy/ Environment focus); Arizona State University (B.S. Supply Chain Management)</li>
-                                </ul>
                             </div>
                         </div>
 
                         {/* Team Member 2: Lee */}
-                        <div style={{ display: 'flex', gap: '2rem' }}>
-                            {/* Image */}
-                            <div style={{
-                                width: '180px',
-                                height: '180px',
-                                flexShrink: 0,
-                                position: 'relative',
-                                overflow: 'hidden'
-                            }}>
-                                <Image
-                                    src="/images/lee-addams.jpg"
-                                    alt="Lee Addams"
-                                    width={180}
-                                    height={180}
-                                    style={{ objectFit: 'cover' }}
-                                />
-                            </div>
-
+                        <div>
                             <div>
-                                <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', fontWeight: 'normal', fontFamily: 'DM Sans, sans-serif', textAlign: 'left' }}>
+                                <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', fontWeight: 'normal', fontFamily: 'DM Sans, sans-serif', textAlign: 'left', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                                     <strong>Lee Addams</strong>
                                     <a href="mailto:addams@opentrailventures.com" style={{ color: '#0284c7', textDecoration: 'underline' }}> (addams@opentrailventures.com)</a>
+                                    <a href="https://www.linkedin.com/in/leeaddams/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', marginLeft: '0.25rem' }}>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#0A66C2">
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                        </svg>
+                                    </a>
                                 </h3>
                                 <p style={{ fontStyle: 'italic', marginBottom: '1rem', fontSize: '1rem', textAlign: 'left' }}>
                                     Founder, Open Trail Ventures, LLC; Head of Strategy and Growth, WaterWise Solar
                                 </p>
-                                <ul style={{ listStyle: 'disc', paddingLeft: '1.2rem', margin: 0, fontSize: '0.95rem', lineHeight: '1.5', textAlign: 'left' }}>
-                                    <li style={{ marginBottom: '0.5rem' }}>Former public company management team (Valmont Industries); irrigation technology company CEO</li>
-                                    <li style={{ marginBottom: '0.5rem' }}>Advisory experience - McKinsey & Company, EY-Parthenon</li>
-                                    <li>Stanford University (Ph.D Earth Sciences / Hydrology); Brigham Young University (B.Sc. Applied Physics)</li>
-                                </ul>
                             </div>
                         </div>
 
