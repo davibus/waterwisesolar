@@ -26,7 +26,7 @@ export default function AboutPage() {
                         <div style={{ marginBottom: '3rem' }}>
                             <div>
                                 <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', fontWeight: 'normal', fontFamily: 'DM Sans, sans-serif', textAlign: 'left', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                    <strong>Jim Anderson</strong>
+                                    <strong>Jim Andersen</strong>
                                     <a href="mailto:jim@waterwisesolar.com" style={{ color: 'inherit', textDecoration: 'none', fontStyle: 'italic', opacity: 0.8 }}> (jim@waterwisesolar.com)</a>
                                     <a href="https://www.linkedin.com/in/jamespwaterwise/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', marginLeft: '0.25rem' }}>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#0A66C2">
