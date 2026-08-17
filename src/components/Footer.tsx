@@ -16,7 +16,7 @@ export default function Footer() {
                         />
                     </div>
                     <div className="footer-cta">
-                        <h2>Save Water. Conserve Land. Create Energy.</h2>
+                        <h2>Conserve Water, Conserve Land, Generate Clean Energy</h2>
                     </div>
                     <div className="footer-contact">
                         <Link href="/about" style={{ fontSize: '1.25rem', color: 'inherit', textDecoration: 'underline' }}>Contact</Link>
