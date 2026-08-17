@@ -18,44 +18,18 @@ export default function Home() {
       </section>
 
       {/* Spacer */}
-      <div style={{ height: '75px', backgroundColor: '#8d954e' }}></div>
+      <div className="section-spacer"></div>
 
       {/* Introduction Section */}
-      <section className="section section-warm water-energy-nexus-section" style={{
-        backgroundImage: 'url(/images/water-energy-nexus-optimized.jpeg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        position: 'relative',
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center'
-      }}>
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          zIndex: 0
-        }}></div>
-        <div className="container" style={{ position: 'relative', zIndex: 1, maxWidth: '2100px', padding: '0 clamp(1.5rem, 4vw, 3rem)' }}>
-          <div style={{
-            width: '50%',
-            margin: '0',
-            textAlign: 'left',
-            background: 'rgba(0, 0, 0, 0.5)',
-            backdropFilter: 'blur(10px)',
-            padding: 'clamp(1.5rem, 3vw, 2.5rem)',
-            borderRadius: '12px',
-            border: '1px solid rgba(255, 255, 255, 0.1)'
-          }}>
-            <h2 className="water-energy-title" style={{ color: 'white', textAlign: 'left', fontSize: 'clamp(1.125rem, 4.1vw, 3.22rem)' }}>The Water-Energy Challenge in the American West</h2>
-            <p className="overview-intro water-energy-text" style={{ color: 'white', textAlign: 'left', fontSize: 'clamp(0.5rem, 1.75vw, 1rem)', maxWidth: 'none', margin: '0 0 1.5rem 0' }}>
+      <section className="section section-warm water-energy-nexus-section">
+        <div className="section-overlay"></div>
+        <div className="container section-content-overlay water-energy-container">
+          <div className="water-energy-box">
+            <h2 className="water-energy-title">The Water-Energy Challenge in the American West</h2>
+            <p className="overview-intro water-energy-text">
               The Colorado River, a vital water source for the American West, is in crisis. Ongoing drought, chronic overuse, and climate pressures have triggered historic water shortages, prompting mandatory cutbacks and urgent calls to rebalance the region's water withdrawals with its dwindling supply.
             </p>
-            <p className="overview-intro water-energy-text" style={{ color: 'white', textAlign: 'left', fontSize: 'clamp(0.5rem, 1.75vw, 1rem)', maxWidth: 'none', margin: '0' }}>
+            <p className="overview-intro water-energy-text">
               Floating solar photovoltaic (FPV) systems have been in wide use at large scale in Southeast Asia as a way to double use scarce land. Water Wise SS offers a complementary solution that mitigates evaporative losses from reservoirs while generating clean electricity—without requiring major changes to consumer behavior or infrastructure expansion. Utah, Arizona, New Mexico and Southern California with their abundant solar resources, increasing energy demand, constant drought conditions, reliance on the Colorado River and numerous man-made reservoirs, are ideal locations for deployment of this technology.
             </p>
           </div>
@@ -63,7 +37,7 @@ export default function Home() {
       </section>
 
       {/* Spacer */}
-      <div style={{ height: '75px', backgroundColor: '#8d954e' }}></div>
+      <div className="section-spacer"></div>
 
       {/* Introduction Section */}
       <section className="section section-dark section-with-background-image intro-floating-section">
@@ -80,24 +54,24 @@ export default function Home() {
           }}
         />
         <div className="section-overlay intro-overlay"></div>
-        <div className="container section-content-overlay" style={{ maxWidth: '100%', padding: '0 clamp(1.5rem, 4vw, 3rem)' }}>
+        <div className="container section-content-overlay">
           <div className="intro-floating-layout">
             <div className="intro-floating-content">
-              <h2 className="intro-floating-title" style={{ whiteSpace: 'nowrap' }}>The Floating Solar Opportunity</h2>
+              <h2 className="intro-floating-title">The Floating Solar Opportunity</h2>
             </div>
 
             <div className="intro-floating-cards">
-              <Link href="/f/fpv-water-conservation" className="intro-card intro-card-1" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
+              <Link href="/f/fpv-water-conservation" className="intro-card intro-card-1">
                 <div className="intro-card-icon">💧</div>
                 <h3 className="intro-card-title">Save Water</h3>
               </Link>
 
-              <Link href="/f/solar-land-vs-water" className="intro-card intro-card-2" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
+              <Link href="/f/solar-land-vs-water" className="intro-card intro-card-2">
                 <div className="intro-card-icon">🏞️</div>
                 <h3 className="intro-card-title">Conserve Land</h3>
               </Link>
 
-              <Link href="/f/introduction" className="intro-card intro-card-3" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
+              <Link href="/f/introduction" className="intro-card intro-card-3">
                 <div className="intro-card-icon">⚡</div>
                 <h3 className="intro-card-title">Create Energy</h3>
               </Link>
@@ -107,7 +81,7 @@ export default function Home() {
       </section>
 
       {/* Spacer */}
-      <div style={{ height: '75px', backgroundColor: '#8d954e' }}></div>
+      <div className="section-spacer"></div>
 
       {/* Advantages of Floating Solar Section */}
       <section className="section section-light section-with-background-image solar-land-water-section">
@@ -123,7 +97,7 @@ export default function Home() {
           }}
         />
         <div className="section-overlay solar-land-overlay"></div>
-        <div className="container section-content-overlay" style={{ maxWidth: '100%', padding: '0 clamp(1.5rem, 4vw, 3rem)' }}>
+        <div className="container section-content-overlay">
           <div className="solar-land-layout">
             <div className="solar-land-content">
               <h2 className="solar-land-title">Advantages of Floating Solar</h2>
@@ -133,17 +107,17 @@ export default function Home() {
             </div>
 
             <div className="solar-land-cards">
-              <Link href="/f/solar-land-vs-water" className="solar-land-card solar-land-card-1" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
+              <Link href="/f/solar-land-vs-water" className="solar-land-card solar-land-card-1">
                 <h3 className="solar-land-card-title">Efficient Land Use & Infrastructure</h3>
                 <p className="solar-land-card-text">Dual-use of existing water bodies without consuming agricultural land or natural habitats. Existing infrastructure and access significantly reduce development costs.</p>
               </Link>
 
-              <Link href="/f/fpv-size-and-business-case" className="solar-land-card solar-land-card-2" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
+              <Link href="/f/fpv-size-and-business-case" className="solar-land-card solar-land-card-2">
                 <h3 className="solar-land-card-title">Improved Performance & Optimized Yield</h3>
                 <p className="solar-land-card-text">Water cooling enhances panel efficiency by 6-12% over land-based systems. Uniform exposure with minimal obstructions optimizes energy yield.</p>
               </Link>
 
-              <Link href="/f/environmental-recreational-and-permitting-factors" className="solar-land-card solar-land-card-3" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
+              <Link href="/f/environmental-recreational-and-permitting-factors" className="solar-land-card solar-land-card-3">
                 <h3 className="solar-land-card-title">Water Conservation & Environmental Protection</h3>
                 <p className="solar-land-card-text">Saves up to 80% of evaporative losses, while avoiding land clearing / soil compaction associated with land-based solar.</p>
               </Link>
@@ -153,18 +127,14 @@ export default function Home() {
       </section>
 
       {/* Spacer */}
-      <div style={{ height: '75px', backgroundColor: '#8d954e' }}></div>
+      <div className="section-spacer"></div>
 
       {/* Improving the Water Economy Section */}
       <section className="section section-light section-with-video fpv-conservation-section">
         <SectionVideo />
-        <div className="container section-content-overlay" style={{ maxWidth: '100%', padding: '0 clamp(1.5rem, 4vw, 3rem)' }}>
+        <div className="container section-content-overlay">
           <div className="fpv-conservation-centered-layout">
-            <div className="fpv-conservation-header" style={{
-              backgroundColor: 'rgba(0, 0, 0, 0.5)',
-              padding: '2rem',
-              borderRadius: '8px'
-            }}>
+            <div className="fpv-conservation-header">
               <h2 className="fpv-conservation-title-centered">Improving the Water Economy</h2>
               <p className="fpv-conservation-description-centered">
                 Floating solar arrays provide a scientifically-validated approach to reducing evaporative water loss from reservoirs while generating clean electricity.
@@ -172,19 +142,19 @@ export default function Home() {
             </div>
 
             <div className="fpv-conservation-cards-grid">
-              <Link href="/f/fpv-water-conservation" className="fpv-conservation-card fpv-conservation-card-1" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
+              <Link href="/f/fpv-water-conservation" className="fpv-conservation-card fpv-conservation-card-1">
                 <div className="fpv-conservation-icon">💧</div>
                 <h3 className="fpv-conservation-card-title">Evaporation Reduction</h3>
                 <p className="fpv-conservation-card-text">Evaporation is 30% of total Colorado River Basin water use.</p>
               </Link>
 
-              <Link href="/f/environmental-recreational-and-permitting-factors" className="fpv-conservation-card fpv-conservation-card-2" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
+              <Link href="/f/environmental-recreational-and-permitting-factors" className="fpv-conservation-card fpv-conservation-card-2">
                 <div className="fpv-conservation-icon">📈</div>
                 <h3 className="fpv-conservation-card-title">Ecological Co-Benefits</h3>
                 <p className="fpv-conservation-card-text">FPV improves water quality, reduces temperature, wind/erosion and preserves the health of the reservoir.</p>
               </Link>
 
-              <Link href="/f/electricity-pricing-ppa%E2%80%99s-and-government-programs" className="fpv-conservation-card fpv-conservation-card-3" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
+              <Link href="/f/electricity-pricing-ppa%E2%80%99s-and-government-programs" className="fpv-conservation-card fpv-conservation-card-3">
                 <div className="fpv-conservation-icon">🔬</div>
                 <h3 className="fpv-conservation-card-title">Cost-effective Solutions</h3>
                 <p className="fpv-conservation-card-text">FPV offers a cost-effective, long term compliment to water buyback programs ($360/acre-ft annually) or other, more expensive alternatives.</p>
@@ -196,4 +166,3 @@ export default function Home() {
     </div>
   );
 }
-
