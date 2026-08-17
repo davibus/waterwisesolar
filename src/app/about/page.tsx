@@ -35,7 +35,7 @@ export default function AboutPage() {
                                     <a href="mailto:jim@waterwisesolar.com" style={{ color: 'inherit', textDecoration: 'none', fontStyle: 'italic', opacity: 0.8 }}> (jim@waterwisesolar.com)</a>
                                 </h3>
                                 <p style={{ fontStyle: 'italic', marginBottom: '1rem', fontSize: '1rem', textAlign: 'left' }}>
-                                    <strong>Co-Founder</strong>, Water Wise Solar, Site Development and Technology
+                                    <strong>Co-Founder</strong>, Water Wise Solar, LLC, Site Development and Technology
                                 </p>
                             </div>
                         </div>
@@ -54,7 +54,7 @@ export default function AboutPage() {
                                 </h3>
                                 <p style={{ fontStyle: 'italic', marginBottom: '1rem', fontSize: '1rem', textAlign: 'left' }}>
                                     <strong>Founder</strong>, Open Trail Ventures<br />
-                                    <strong>Co-founder</strong>, Water Wise Solar, Operations and Corp Development
+                                    <strong>Co-founder</strong>, Water Wise Solar, LLC, Operations and Corp Development
                                 </p>
                             </div>
                         </div>
