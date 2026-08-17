@@ -99,19 +99,16 @@ export default function Home() {
 
             <div className="fpv-conservation-cards-grid">
               <Link href="/f/fpv-water-conservation" className="fpv-conservation-card fpv-conservation-card-1">
-                <div className="fpv-conservation-icon">💧</div>
                 <h3 className="fpv-conservation-card-title">Evaporation Reduction</h3>
                 <p className="fpv-conservation-card-text">Evaporation is 30% of total Colorado River Basin water use.</p>
               </Link>
 
               <Link href="/f/environmental-recreational-and-permitting-factors" className="fpv-conservation-card fpv-conservation-card-2">
-                <div className="fpv-conservation-icon">📈</div>
                 <h3 className="fpv-conservation-card-title">Ecological Co-Benefits</h3>
                 <p className="fpv-conservation-card-text">FPV improves water quality, reduces temperature, wind/erosion and preserves the health of the reservoir.</p>
               </Link>
 
               <Link href="/f/electricity-pricing-ppa%E2%80%99s-and-government-programs" className="fpv-conservation-card fpv-conservation-card-3">
-                <div className="fpv-conservation-icon">🔬</div>
                 <h3 className="fpv-conservation-card-title">Cost-effective Solutions</h3>
                 <p className="fpv-conservation-card-text">FPV offers a cost-effective, long term compliment to water buyback programs ($360/acre-ft annually) or other, more expensive alternatives.</p>
               </Link>
