@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Water Wise Solar Solutions',
+  title: 'Water Wise Solar',
   description: 'Floating Solar in the Colorado River Basin and beyond.',
   viewport: {
     width: 'device-width',

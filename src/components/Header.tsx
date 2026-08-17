@@ -22,12 +22,12 @@ export default function Header() {
                     <Link href="/" className="logo">
                         <Image
                             src="/images/header-logo.jpg"
-                            alt="Water Wise Solar Solutions"
+                            alt="Water Wise Solar"
                             width={50}
                             height={50}
                             className="header-logo-image"
                         />
-                        <span>Water Wise Solar Solutions</span>
+                        <span>Water Wise Solar</span>
                     </Link>
 
                     <button

@@ -13,7 +13,7 @@ export default function Home() {
         <HeroVideo />
         <div className="hero-content-overlay">
           <h2 className="hero-title">Floating Solar in the West</h2>
-          <h1>Conserving water, conserving land, accelerating energy generation.</h1>
+          <h1>Conserve Water, Conserve Land, Generate Clean Energy</h1>
         </div>
       </section>
 
@@ -32,50 +32,6 @@ export default function Home() {
             <p className="overview-intro water-energy-text">
               Floating solar photovoltaic (FPV) systems have been in wide use at large scale in Southeast Asia as a way to double use scarce land. Water Wise SS offers a complementary solution that mitigates evaporative losses from reservoirs while generating clean electricity—without requiring major changes to consumer behavior or infrastructure expansion. Utah, Arizona, New Mexico and Southern California with their abundant solar resources, increasing energy demand, constant drought conditions, reliance on the Colorado River and numerous man-made reservoirs, are ideal locations for deployment of this technology.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Spacer */}
-      <div className="section-spacer"></div>
-
-      {/* Introduction Section */}
-      <section className="section section-dark section-with-background-image intro-floating-section">
-        <Image
-          src="/images/introduction-to-floating-solar.jpeg"
-          alt="Floating solar panels installed on water reservoir demonstrating sustainable energy generation"
-          fill
-          priority
-          className="section-background-image"
-          sizes="100vw"
-          style={{
-            objectFit: 'cover',
-            objectPosition: 'center',
-          }}
-        />
-        <div className="section-overlay intro-overlay"></div>
-        <div className="container section-content-overlay">
-          <div className="intro-floating-layout">
-            <div className="intro-floating-content">
-              <h2 className="intro-floating-title">The Floating Solar Opportunity</h2>
-            </div>
-
-            <div className="intro-floating-cards">
-              <Link href="/f/fpv-water-conservation" className="intro-card intro-card-1">
-                <div className="intro-card-icon">💧</div>
-                <h3 className="intro-card-title">Save Water</h3>
-              </Link>
-
-              <Link href="/f/solar-land-vs-water" className="intro-card intro-card-2">
-                <div className="intro-card-icon">🏞️</div>
-                <h3 className="intro-card-title">Conserve Land</h3>
-              </Link>
-
-              <Link href="/f/introduction" className="intro-card intro-card-3">
-                <div className="intro-card-icon">⚡</div>
-                <h3 className="intro-card-title">Create Energy</h3>
-              </Link>
-            </div>
           </div>
         </div>
       </section>

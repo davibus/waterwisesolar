@@ -9,7 +9,7 @@ export default function Footer() {
                     <div className="footer-logo">
                         <Image
                             src="/images/waterwise-logo.png"
-                            alt="Water Wise Solar Solutions Logo"
+                            alt="Water Wise Solar Logo"
                             width={180}
                             height={180}
                             className="logo-image"
@@ -23,7 +23,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="footer-bottom">
-                    <p>&copy; {new Date().getFullYear()} Water Wise Solar Solutions - All Rights Reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Water Wise Solar - All Rights Reserved.</p>
                 </div>
             </div>
         </footer>
