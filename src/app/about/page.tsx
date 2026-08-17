@@ -35,7 +35,7 @@ export default function AboutPage() {
                                     <a href="mailto:jim@waterwisesolar.com" style={{ color: 'inherit', textDecoration: 'none', fontStyle: 'italic', opacity: 0.8 }}> (jim@waterwisesolar.com)</a>
                                 </h3>
                                 <p style={{ fontStyle: 'italic', marginBottom: '1rem', fontSize: '1rem', textAlign: 'left' }}>
-                                    Co-Founder, Site Development and Technology
+                                    <strong>Co-Founder</strong>, Water Wise Solar, Site Development and Technology
                                 </p>
                             </div>
                         </div>
@@ -50,11 +50,11 @@ export default function AboutPage() {
                                         </svg>
                                     </a>
                                     <strong>Lee Addams</strong>
-                                    <a href="mailto:lee@waterwisesolar.com" style={{ color: '#0284c7', textDecoration: 'underline' }}> (lee@waterwisesolar.com)</a>
+                                    <a href="mailto:lee@waterwisesolar.com" style={{ color: '#0284c7', textDecoration: 'underline', fontStyle: 'italic' }}> (lee@waterwisesolar.com)</a>
                                 </h3>
                                 <p style={{ fontStyle: 'italic', marginBottom: '1rem', fontSize: '1rem', textAlign: 'left' }}>
-                                    Founder, Open Trail Ventures<br />
-                                    Co-founder, Water Wise Solar, Operations and Corp Development
+                                    <strong>Founder</strong>, Open Trail Ventures<br />
+                                    <strong>Co-founder</strong>, Water Wise Solar, Operations and Corp Development
                                 </p>
                             </div>
                         </div>
